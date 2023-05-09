@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library ref="ccpa" name="ccpa" enabled="true" revision="1" tags="">
+  <desc/>
+  <categoryComponents/>
+  <componentDefinitions/>
+  <supportedStandards>
+    <supportedStandard ref="CCPA" name="CCPA"/>
+  </supportedStandards>
+  <riskPatterns>
+    <riskPattern uuid="c522070a-6f8f-4453-8b03-bcd3f8cae3f2" ref="right-to-correct" name="Right to correct" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="implement-process-to-support-right-to-correct-process" name="Implement process to support &quot;right to correct&quot; process" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;p&gt;User have the right to request that any stored and inaccurate data be amended.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Businesses should designate two methods for submitting correction requests.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Business has 45 days to respond. Longer timelines are permitted if the business has contacted the end user and provided notification.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;The business may deny the request if:&lt;/p&gt;
+&lt;ul&gt;
+ &lt;li&gt;The business cannot verify the user's identity to complete the request&lt;/li&gt;
+ &lt;li&gt;The request is manifestly unfounded or excessive&lt;/li&gt;
+ &lt;li&gt;The information is publicly available information, certain medical information, consumer credit reporting information, or other types of information exempt from the CCPA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards>
+            <standard ref="Right to Correct" supportedStandardRef="CCPA"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="general" name="CCPA - General" desc="" library="">
+          <threats>
+            <threat ref="business-stores-inaccurate-information-about-user" name="Business stores inaccurate information about user" state="Expose" source="MANUAL" library="">
+              <desc>&lt;p&gt;A user may request that a business correct user information stored within their systems&lt;/p&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="implement-process-to-support-right-to-correct-process" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </riskPattern>
+    <riskPattern uuid="135b718f-8d0b-4085-948f-3a86c96ae968" ref="right-to-delete" name="Right to Delete" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="implement-process-to-support-right-to-delete-request-from-user" name="Implement process to support &quot;right to delete&quot; request from user" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;p&gt;Businesses must designate at least two methods for users to submit your request—for example, a toll-free number, email address, website form, or hard copy form. However, if a business operates exclusively online, it only needs to provide an email address for submitting requests.&lt;/p&gt;
+&lt;p&gt;Businesses cannot make users create an account just to submit a deletion request, but if a user already have an account with the business, it may require the user to submit your request through that account.&lt;/p&gt;
+&lt;p&gt;Businesses must respond to a user request within 45 calendar days. They can extend that deadline by another 45 days (90 days total) if they notify the user.&lt;/p&gt;
+&lt;p&gt;There are exceptions to the right to delete. Common reasons why businesses may keep personal information include:&lt;/p&gt;
+&lt;ul&gt;
+ &lt;li&gt;The business cannot verify the request&lt;/li&gt;
+ &lt;li&gt;To complete a user transaction, provide a reasonably anticipated product or service, or for certain warranty and product recall purposes&lt;/li&gt;
+ &lt;li&gt;For certain business security practices&lt;/li&gt;
+ &lt;li&gt;For certain internal uses that are compatible with reasonable consumer expectations or the context in which the information was provided&lt;/li&gt;
+ &lt;li&gt;To comply with legal obligations, exercise legal claims or rights, or defend legal claims&lt;/li&gt;
+ &lt;li&gt;If the personal information is certain medical information, consumer credit reporting information, or other types of information exempt from the CCPA&lt;/li&gt;
+ &lt;li&gt;See Civil Code sections 1798.105(d) and 1798.145 for more exceptions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards>
+            <standard ref="Right to Delete" supportedStandardRef="CCPA"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="general" name="CCPA - General" desc="" library="">
+          <threats>
+            <threat ref="user-information-is-not-deleted-after-requested-by-end-user" name="User information is not deleted after requested by end user" state="Expose" source="MANUAL" library="">
+              <desc>&lt;p&gt;Users may request that a business delete their information collected about end users.&lt;/p&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="implement-process-to-support-right-to-delete-request-from-user" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </riskPattern>
+    <riskPattern uuid="8ec7bdac-d2da-4f1a-94ae-20a7cc9d5da3" ref="right-to-know" name="Right to Know" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="designate-two-methods-to-submit-right-to-know-request" name="Designate two methods to submit &quot;right to know&quot; request" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;p&gt;Businesses must designate at least two methods for users to submit requests . One of those methods has to be a toll-free phone number and, if the business has a website, one of those methods has to be through the website.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Businesses cannot make a user create an account just to submit a request to know, but if the user already has an account with the business, it may require you to submit your request through that account.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards>
+            <standard ref="Right to Know" supportedStandardRef="CCPA"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="give-consumers-a-notice-of-collection-warning" name="Give consumers a &quot;notice of collection&quot; warning" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;p&gt;The CCPA requires businesses to give consumers certain information in a “notice at collection.” A notice at collection must list the categories of personal information businesses collect about consumers and the purposes for which they use the categories of information. (To find out how you can learn what specific information a business has collected about you, see the Right to Know section.) If the business sells consumers’ personal information, then the notice at collection must include a Do Not Sell or Share link. The notice must also contain a link to the business’s privacy policy, where consumers can get a fuller description of the business’s privacy practices and of their privacy rights.&lt;/p&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards>
+            <standard ref="Right to Know" supportedStandardRef="CCPA"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="general" name="CCPA - General" desc="" library="">
+          <threats>
+            <threat ref="user-is-unable-to-request-request-to-know-request-to-business" name="User is unable to submit &quot;Request to Know&quot; request to business" state="Expose" source="MANUAL" library="">
+              <desc/>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="designate-two-methods-to-submit-right-to-know-request" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+            <threat ref="user-is-unaware-of-what-information-is-being-collected" name="User is unaware of what information is being collected" state="Expose" source="MANUAL" library="">
+              <desc>&lt;p&gt;Businesses should be able to demonstrate what personal information has been collected, used, shared, or sold and why that information was &amp;nbsp;collected, used, shared, or sold.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;A business must be able to provide this information for the previous 12 month period.&amp;nbsp;&lt;/p&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="give-consumers-a-notice-of-collection-warning" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </riskPattern>
+    <riskPattern uuid="fe3a46e6-6407-4335-b156-7a329481e4cc" ref="right-to-limit" name="Right to limit" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="create-process-to-ensure-that-sensitive-information-is-only-used-for-limited-purposes" name="Create process to ensure that sensitive information is only used for limited purposes" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;p&gt;Users can direct businesses to only use user sensitive personal information (for example, user social security number, financial account information, user precise geolocation data, or your genetic data) for limited purposes, such as providing the user with the services requested.&lt;/p&gt;
+&lt;p&gt;The California Privacy Protection Agency is currently engaged in a formal rulemaking process and has proposed CCPA regulations pertaining to the right to limit, but these are not currently final or effective.&lt;/p&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards>
+            <standard ref="Right to Limit" supportedStandardRef="CCPA"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="general" name="CCPA - General" desc="" library="">
+          <threats>
+            <threat ref="personal-data-is-used-for-unauthorized-purposes" name="Personal data is used for unauthorized purposes" state="Expose" source="MANUAL" library="">
+              <desc/>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="create-process-to-ensure-that-sensitive-information-is-only-used-for-limited-purposes" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </riskPattern>
+    <riskPattern uuid="6dd960bb-8ab0-4d5a-b2c7-0a0e4aefaa9f" ref="right-to-non-discrimination" name="Right to Non-discrimination" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="review-business-process-for-discriminatory-processes" name="Review business process for discriminatory processes" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;p&gt;Businesses cannot deny goods or services, charge a different price, or provide a different level or quality of goods or services just because a user exercised their rights under the CCPA.&lt;/p&gt;
+&lt;p&gt;However, if users refuse to provide their personal information to a business or ask it to delete or stop selling their personal information, and that personal information or sale is necessary for the business to provide users with goods or services, the business may not be able to complete that transaction.&lt;/p&gt;
+&lt;p&gt;Businesses can also offer users promotions, discounts and other deals in exchange for collecting, keeping, or selling their personal information. But they can only do this if the financial incentive offered is reasonably related to the value of the personal information. If users ask a business to delete or stop selling &amp;nbsp;personal information, users may not be able to continue participating in the special deals they offer in exchange for personal information. If &amp;nbsp;users are not sure how the request may affect their participation in a special offer, ask the business.&lt;/p&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards>
+            <standard ref="Right to Non-discrimination" supportedStandardRef="CCPA"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="general" name="CCPA - General" desc="" library="">
+          <threats>
+            <threat ref="business-provides-different-treatment-discriminatory-treatment-because-a-user-exercises-their-rights-under-ccpa" name="Business provides different treatment (discriminatory treatment) because a user exercises their rights under CCPA. " state="Expose" source="MANUAL" library="">
+              <desc/>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="review-business-process-for-discriminatory-processes" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </riskPattern>
+    <riskPattern uuid="1047aaef-253d-439f-8149-71877e52f8ec" ref="right-to-opt-out" name="Right to opt-out" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="provide-opt-out-option-for-users-regarding-data-collection" name="Provide &quot;opt-out&quot; option for users regarding data collection" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;p&gt;Users may request that businesses stop selling or sharing personal information (“opt-out”). Note that sharing refers specifically to sharing for cross-context behavioral advertising, which is the targeting of advertising to a &lt;a href="https://thecpra.org/#1798.140(i)" target="_blank"&gt;consumer&lt;/a&gt; based on the &lt;a href="https://thecpra.org/#1798.140(i)" target="_blank"&gt;consumer&lt;/a&gt;’s &lt;a href="https://thecpra.org/#1798.140(v)" target="_blank"&gt;personal information&lt;/a&gt; obtained from the &lt;a href="https://thecpra.org/#1798.140(i)" target="_blank"&gt;consumer&lt;/a&gt;’s online activity across numerous websites. With some exceptions, businesses cannot sell or share &amp;nbsp;personal information after they receive the opt-out request unless users later provide authorization allowing them to do so again. Businesses must wait at least 12 months before asking users to opt back in to the sale or sharing of the users personal information.&lt;/p&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards>
+            <standard ref="Right to Opt-out" supportedStandardRef="CCPA"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="general" name="CCPA - General" desc="" library="">
+          <threats>
+            <threat ref="user-is-unable-to-opt-out-from-the-collection-of-their-personal-data" name="User is unable to opt out from the collection of their personal data" state="Expose" source="MANUAL" library="">
+              <desc/>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="provide-opt-out-option-for-users-regarding-data-collection" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </riskPattern>
+  </riskPatterns>
+  <rules>
+    <rule name="01 - If PII, insert CCPA Questionnaire" module="component" generatedByGui="true">
+      <conditions>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="Personally Identifiable InformationStored"/>
+      </conditions>
+      <actions>
+        <action project="" value="CCPA Question 1_::_CCPA_::_What kind of CCPA covered PII is collected?_::_1_::_false_::_false_::_" name="INSERT_COMPONENT_QUESTION_GROUP"/>
+      </actions>
+    </rule>
+    <rule name="02 - Insert CCPA data types answers" module="component" generatedByGui="true">
+      <conditions>
+        <condition name="CONDITION_COMPONENT_QUESTION_GROUP_EXISTS" field="id" value="CCPA Question 1_::_group"/>
+      </conditions>
+      <actions>
+        <action project="" value="Names_::_Unique Identifiers_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="Customer Records_::_Customer records_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="Characteristics_::_Characteristics_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="Commercial Information_::_Commercial information_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="Biometric information_::_Biometric information_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="Internet Activities_::_Internet Activities_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="Geolocation data_::_Geolocation data_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="Sensory Data_::_Sensory Data_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="Professional information_::_Professional information_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="Education Information_::_Private Education Information_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="User Inferences_::_User Inferences_::_" name="INSERT_COMPONENT_QUESTION"/>
+      </actions>
+    </rule>
+    <rule name="03 - Insert CCPA Risk Patterns" module="component" generatedByGui="true">
+      <conditions>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="Biometric information"/>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="Characteristics"/>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="Commercial Information"/>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="Customer Records"/>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="Geolocation data"/>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="Internet Activities"/>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="Education Information"/>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="Professional information"/>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="Sensory Data"/>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="Names"/>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="User Inferences"/>
+      </conditions>
+      <actions>
+        <action project="ccpa" value="ccpa_::_right-to-correct" name="IMPORT_RISK_PATTERN"/>
+        <action project="ccpa" value="ccpa_::_right-to-delete" name="IMPORT_RISK_PATTERN"/>
+        <action project="ccpa" value="ccpa_::_right-to-know" name="IMPORT_RISK_PATTERN"/>
+        <action project="ccpa" value="ccpa_::_right-to-limit" name="IMPORT_RISK_PATTERN"/>
+        <action project="ccpa" value="ccpa_::_right-to-non-discrimination" name="IMPORT_RISK_PATTERN"/>
+        <action project="ccpa" value="ccpa_::_right-to-opt-out" name="IMPORT_RISK_PATTERN"/>
+      </actions>
+    </rule>
+  </rules>
+</library>

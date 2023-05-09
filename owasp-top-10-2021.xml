@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library ref="owasp-top-10-2021" name="OWASP - Top 10 - 2021" enabled="true" revision="1" tags="">
+  <desc/>
+  <categoryComponents/>
+  <componentDefinitions/>
+  <supportedStandards/>
+  <riskPatterns>
+    <riskPattern uuid="778150c6-3686-438d-a0b6-7c0343fff8dd" ref="a01-2021-broken-access-control" name="A01:2021 - Broken Access Control" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="a01-2021-broken-access-controls-preventative-Controls" name="A01:2021 - Broken Access Controls - Preventative Controls" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;h2&gt;How to Prevent&lt;/h2&gt;
+&lt;p&gt;Access control is only effective in trusted server-side code or server-less API, where the attacker cannot modify the access control check or metadata.&lt;/p&gt;
+&lt;p&gt;Except for public resources, deny by default.&lt;/p&gt;
+&lt;p&gt;Implement access control mechanisms once and re-use them throughout the application, including minimizing Cross-Origin Resource Sharing (CORS) usage.&lt;/p&gt;
+&lt;p&gt;Model access controls should enforce record ownership rather than accepting that the user can create, read, update, or delete any record.&lt;/p&gt;
+&lt;p&gt;Unique application business limit requirements should be enforced by domain models.&lt;/p&gt;
+&lt;p&gt;Disable web server directory listing and ensure file metadata (e.g., .git) and backup files are not present within web roots.&lt;/p&gt;
+&lt;p&gt;Log access control failures, alert admins when appropriate (e.g., repeated failures).&lt;/p&gt;
+&lt;p&gt;Rate limit API and controller access to minimize the harm from automated attack tooling.&lt;/p&gt;
+&lt;p&gt;Stateful session identifiers should be invalidated on the server after logout. Stateless JWT tokens should rather be short-lived so that the window of opportunity for an attacker is minimized. For longer lived JWTs it's highly recommended to follow the OAuth standards to revoke access.&lt;/p&gt;
+&lt;p&gt;Developers and QA staff should include functional access control unit and integration tests.&lt;/p&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="general" name="General" desc="" library="">
+          <threats>
+            <threat ref="a01-2021-broken-access-control" name="A01:2021 - Broken Access Control" state="Expose" source="MANUAL" library="">
+              <desc>&lt;p&gt;Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, or destruction of all data or performing a business function outside the user's limits. Common access control vulnerabilities include:&lt;/p&gt;
+&lt;p&gt;Violation of the principle of least privilege or deny by default, where access should only be granted for particular capabilities, roles, or users, but is available to anyone.&lt;/p&gt;
+&lt;p&gt;Bypassing access control checks by modifying the URL (parameter tampering or force browsing), internal application state, or the HTML page, or by using an attack tool modifying API requests.&lt;/p&gt;
+&lt;p&gt;Permitting viewing or editing someone else's account, by providing its unique identifier (insecure direct object references)&lt;/p&gt;
+&lt;p&gt;Accessing API with missing access controls for POST, PUT and DELETE.&lt;/p&gt;
+&lt;p&gt;Elevation of privilege. Acting as a user without being logged in or acting as an admin when logged in as a user.&lt;/p&gt;
+&lt;p&gt;Metadata manipulation, such as replaying or tampering with a JSON Web Token (JWT) access control token, or a cookie or hidden field manipulated to elevate privileges or abusing JWT invalidation.&lt;/p&gt;
+&lt;p&gt;CORS misconfiguration allows API access from unauthorized/untrusted origins.&lt;/p&gt;
+&lt;p&gt;Force browsing to authenticated pages as an unauthenticated user or to privileged pages as a standard user.&lt;/p&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references>
+                <reference name="OWASP - Broken Access Control" url="https://owasp.org/Top10/A01_2021-Broken_Access_Control/"/>
+              </references>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="a01-2021-broken-access-controls-preventative-Controls" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </riskPattern>
+    <riskPattern uuid="e37bce9c-1728-4b0a-af12-f777b8b2d247" ref="a02-2021-cryptographic-failures" name="A02:2021 - Cryptographic Failures" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="a02-2021-cryptographic-failures-preventative-controls" name="A02:2021 - Cryptographic Failures - Preventative Controls" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;h2&gt;How to Prevent&lt;/h2&gt;
+&lt;p&gt;Do the following, at a minimum, and consult the references:&lt;/p&gt;
+&lt;p&gt;Classify data processed, stored, or transmitted by an application. Identify which data is sensitive according to privacy laws, regulatory requirements, or business needs.&lt;/p&gt;
+&lt;p&gt;Don't store sensitive data unnecessarily. Discard it as soon as possible or use PCI DSS compliant tokenization or even truncation. Data that is not retained cannot be stolen.&lt;/p&gt;
+&lt;p&gt;Make sure to encrypt all sensitive data at rest.&lt;/p&gt;
+&lt;p&gt;Ensure up-to-date and strong standard algorithms, protocols, and keys are in place; use proper key management.&lt;/p&gt;
+&lt;p&gt;Encrypt all data in transit with secure protocols such as TLS with forward secrecy (FS) ciphers, cipher prioritization by the server, and secure parameters. Enforce encryption using directives like HTTP Strict Transport Security (HSTS).&lt;/p&gt;
+&lt;p&gt;Disable caching for response that contain sensitive data.&lt;/p&gt;
+&lt;p&gt;Apply required security controls as per the data classification.&lt;/p&gt;
+&lt;p&gt;Do not use legacy protocols such as FTP and SMTP for transporting sensitive data.&lt;/p&gt;
+&lt;p&gt;Store passwords using strong adaptive and salted hashing functions with a work factor (delay factor), such as Argon2, scrypt, bcrypt or PBKDF2.&lt;/p&gt;
+&lt;p&gt;Initialization vectors must be chosen appropriate for the mode of operation. For many modes, this means using a CSPRNG (cryptographically secure pseudo random number generator). For modes that require a nonce, then the initialization vector (IV) does not need a CSPRNG. In all cases, the IV should never be used twice for a fixed key.&lt;/p&gt;
+&lt;p&gt;Always use authenticated encryption instead of just encryption.&lt;/p&gt;
+&lt;p&gt;Keys should be generated cryptographically randomly and stored in memory as byte arrays. If a password is used, then it must be converted to a key via an appropriate password base key derivation function.&lt;/p&gt;
+&lt;p&gt;Ensure that cryptographic randomness is used where appropriate, and that it has not been seeded in a predictable way or with low entropy. Most modern APIs do not require the developer to seed the CSPRNG to get security.&lt;/p&gt;
+&lt;p&gt;Avoid deprecated cryptographic functions and padding schemes, such as MD5, SHA1, PKCS number 1 v1.5 .&lt;/p&gt;
+&lt;p&gt;Verify independently the effectiveness of configuration and settings.&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="OWASP - Cryptographic Failures" url="https://owasp.org/Top10/A02_2021-Cryptographic_Failures/"/>
+          </references>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="general" name="General" desc="" library="">
+          <threats>
+            <threat ref="a02-2021-cryptographic-failures" name="A02:2021 - Cryptographic Failures" state="Expose" source="MANUAL" library="">
+              <desc>&lt;p&gt;The first thing is to determine the protection needs of data in transit and at rest. For example, passwords, credit card numbers, health records, personal information, and business secrets require extra protection, mainly if that data falls under privacy laws, e.g., EU's General Data Protection Regulation (GDPR), or regulations, e.g., financial data protection such as PCI Data Security Standard (PCI DSS). For all such data:&lt;/p&gt;
+&lt;p&gt;Is any data transmitted in clear text? This concerns protocols such as HTTP, SMTP, FTP also using TLS upgrades like STARTTLS. External internet traffic is hazardous. Verify all internal traffic, e.g., between load balancers, web servers, or back-end systems.&lt;/p&gt;
+&lt;p&gt;Are any old or weak cryptographic algorithms or protocols used either by default or in older code?&lt;/p&gt;
+&lt;p&gt;Are default crypto keys in use, weak crypto keys generated or re-used, or is proper key management or rotation missing? Are crypto keys checked into source code repositories?&lt;/p&gt;
+&lt;p&gt;Is encryption not enforced, e.g., are any HTTP headers (browser) security directives or headers missing?&lt;/p&gt;
+&lt;p&gt;Is the received server certificate and the trust chain properly validated?&lt;/p&gt;
+&lt;p&gt;Are initialization vectors ignored, reused, or not generated sufficiently secure for the cryptographic mode of operation? Is an insecure mode of operation such as ECB in use? Is encryption used when authenticated encryption is more appropriate?&lt;/p&gt;
+&lt;p&gt;Are passwords being used as cryptographic keys in absence of a password base key derivation function?&lt;/p&gt;
+&lt;p&gt;Is randomness used for cryptographic purposes that was not designed to meet cryptographic requirements? Even if the correct function is chosen, does it need to be seeded by the developer, and if not, has the developer over-written the strong seeding functionality built into it with a seed that lacks sufficient entropy/unpredictability?&lt;/p&gt;
+&lt;p&gt;Are deprecated hash functions such as MD5 or SHA1 in use, or are non-cryptographic hash functions used when cryptographic hash functions are needed?&lt;/p&gt;
+&lt;p&gt;Are deprecated cryptographic padding methods such as PKCS number 1 v1.5 in use?&lt;/p&gt;
+&lt;p&gt;Are cryptographic error messages or side channel information exploitable, for example in the form of padding oracle attacks?&lt;/p&gt;
+&lt;p&gt;See ASVS Crypto (V7), Data Protection (V9), and SSL/TLS (V10)&lt;/p&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="a02-2021-cryptographic-failures-preventative-controls" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </riskPattern>
+    <riskPattern uuid="40391c8e-d785-478c-b198-56403c1b75ee" ref="a03-2021-injection" name="A03:2021 - Injection" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="a03-2021-injection-preventative-controls" name="A03:2021 - Injection - Preventative Controls" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;h2&gt;How to Prevent&lt;/h2&gt;
+&lt;p&gt;Preventing injection requires keeping data separate from commands and queries:&lt;/p&gt;
+&lt;p&gt;The preferred option is to use a safe API, which avoids using the interpreter entirely, provides a parameterized interface, or migrates to Object Relational Mapping Tools (ORMs).&lt;br&gt;&lt;strong&gt;Note:&lt;/strong&gt; Even when parameterized, stored procedures can still introduce SQL injection if PL/SQL or T-SQL concatenates queries and data or executes hostile data with EXECUTE IMMEDIATE or exec().&lt;/p&gt;
+&lt;p&gt;Use positive server-side input validation. This is not a complete defense as many applications require special characters, such as text areas or APIs for mobile applications.&lt;/p&gt;
+&lt;p&gt;For any residual dynamic queries, escape special characters using the specific escape syntax for that interpreter.&lt;br&gt;&lt;strong&gt;Note:&lt;/strong&gt; SQL structures such as table names, column names, and so on cannot be escaped, and thus user-supplied structure names are dangerous. This is a common issue in report-writing software.&lt;/p&gt;
+&lt;p&gt;Use LIMIT and other SQL controls within queries to prevent mass disclosure of records in case of SQL injection.&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="OWASP - Injection" url="https://owasp.org/Top10/A03_2021-Injection/"/>
+          </references>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="general" name="General" desc="" library="">
+          <threats>
+            <threat ref="a03-2021-injection" name="A03:2021 - Injection" state="Expose" source="MANUAL" library="">
+              <desc>&lt;p&gt;An application is vulnerable to attack when:&lt;/p&gt;
+&lt;p&gt;User-supplied data is not validated, filtered, or sanitized by the application.&lt;/p&gt;
+&lt;p&gt;Dynamic queries or non-parameterized calls without context-aware escaping are used directly in the interpreter.&lt;/p&gt;
+&lt;p&gt;Hostile data is used within object-relational mapping (ORM) search parameters to extract additional, sensitive records.&lt;/p&gt;
+&lt;p&gt;Hostile data is directly used or concatenated. The SQL or command contains the structure and malicious data in dynamic queries, commands, or stored procedures.&lt;/p&gt;
+&lt;p&gt;Some of the more common injections are SQL, NoSQL, OS command, Object Relational Mapping (ORM), LDAP, and Expression Language (EL) or Object Graph Navigation Library (OGNL) injection. The concept is identical among all interpreters. Source code review is the best method of detecting if applications are vulnerable to injections. Automated testing of all parameters, headers, URL, cookies, JSON, SOAP, and XML data inputs is strongly encouraged. Organizations can include static (SAST), dynamic (DAST), and interactive (IAST) application security testing tools into the CI/CD pipeline to identify introduced injection flaws before production deployment.&lt;/p&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="a03-2021-injection-preventative-controls" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </riskPattern>
+    <riskPattern uuid="4dbb90b3-0ebf-465a-b7f8-f6e495eba420" ref="a04-2021-insecure-design" name="A04:2021 - Insecure Design" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="a04-2021-insecure-design-preventative-controls" name="A04:2021 - Insecure Design - Preventative Controls" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;h2&gt;How to Prevent&lt;/h2&gt;
+&lt;p&gt;Establish and use a secure development lifecycle with AppSec professionals to help evaluate and design security and privacy-related controls&lt;/p&gt;
+&lt;p&gt;Establish and use a library of secure design patterns or paved road ready to use components&lt;/p&gt;
+&lt;p&gt;Use threat modeling for critical authentication, access control, business logic, and key flows&lt;/p&gt;
+&lt;p&gt;Integrate security language and controls into user stories&lt;/p&gt;
+&lt;p&gt;Integrate plausibility checks at each tier of your application (from frontend to backend)&lt;/p&gt;
+&lt;p&gt;Write unit and integration tests to validate that all critical flows are resistant to the threat model. Compile use-cases &lt;i&gt;and&lt;/i&gt; misuse-cases for each tier of your application.&lt;/p&gt;
+&lt;p&gt;Segregate tier layers on the system and network layers depending on the exposure and protection needs&lt;/p&gt;
+&lt;p&gt;Segregate tenants robustly by design throughout all tiers&lt;/p&gt;
+&lt;p&gt;Limit resource consumption by user or service&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="OWASP - Insecure Design" url="https://owasp.org/Top10/A04_2021-Insecure_Design/"/>
+          </references>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="general" name="General" desc="" library="">
+          <threats>
+            <threat ref="a04-2021-insecure-design" name="A04:2021 - Insecure Design" state="Expose" source="MANUAL" library="">
+              <desc>&lt;p&gt;Insecure design is a broad category representing different weaknesses, expressed as “missing or ineffective control design.” Insecure design is not the source for all other Top 10 risk categories. There is a difference between insecure design and insecure implementation. We differentiate between design flaws and implementation defects for a reason, they have different root causes and remediation. A secure design can still have implementation defects leading to vulnerabilities that may be exploited. An insecure design cannot be fixed by a perfect implementation as by definition, needed security controls were never created to defend against specific attacks. One of the factors that contribute to insecure design is the lack of business risk profiling inherent in the software or system being developed, and thus the failure to determine what level of security design is required.&lt;/p&gt;
+&lt;p&gt;Requirements and Resource Management&lt;/p&gt;
+&lt;p&gt;Collect and negotiate the business requirements for an application with the business, including the protection requirements concerning confidentiality, integrity, availability, and authenticity of all data assets and the expected business logic. Take into account how exposed your application will be and if you need segregation of tenants (additionally to access control). Compile the technical requirements, including functional and non-functional security requirements. Plan and negotiate the budget covering all design, build, testing, and operation, including security activities.&lt;/p&gt;
+&lt;p&gt;Secure Design&lt;/p&gt;
+&lt;p&gt;Secure design is a culture and methodology that constantly evaluates threats and ensures that code is robustly designed and tested to prevent known attack methods. Threat modeling should be integrated into refinement sessions (or similar activities); look for changes in data flows and access control or other security controls. In the user story development determine the correct flow and failure states, ensure they are well understood and agreed upon by responsible and impacted parties. Analyze assumptions and conditions for expected and failure flows, ensure they are still accurate and desirable. Determine how to validate the assumptions and enforce conditions needed for proper behaviors. Ensure the results are documented in the user story. Learn from mistakes and offer positive incentives to promote improvements. Secure design is neither an add-on nor a tool that you can add to software.&lt;/p&gt;
+&lt;p&gt;Secure Development Lifecycle&lt;/p&gt;
+&lt;p&gt;Secure software requires a secure development lifecycle, some form of secure design pattern, paved road methodology, secured component library, tooling, and threat modeling. Reach out for your security specialists at the beginning of a software project throughout the whole project and maintenance of your software. Consider leveraging the &lt;a href="https://owaspsamm.org/" target="_blank"&gt;OWASP Software Assurance Maturity Model (SAMM)&lt;/a&gt; to help structure your secure software development efforts.&lt;/p&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="a04-2021-insecure-design-preventative-controls" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </riskPattern>
+    <riskPattern uuid="29d77fe3-f80b-4ccd-af4f-f2bc4fc32cec" ref="a05-2021-security-misconfiguration" name="A05:2021 - Security Misconfiguration" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="a05-2021-security-misconfiguration-preventative-controls" name="A05:2021 – Security Misconfiguration - Preventative Controls" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;h2&gt;How to Prevent&lt;/h2&gt;
+&lt;p&gt;Secure installation processes should be implemented, including:&lt;/p&gt;
+&lt;p&gt;A repeatable hardening process makes it fast and easy to deploy another environment that is appropriately locked down. Development, QA, and production environments should all be configured identically, with different credentials used in each environment. This process should be automated to minimize the effort required to set up a new secure environment.&lt;/p&gt;
+&lt;p&gt;A minimal platform without any unnecessary features, components, documentation, and samples. Remove or do not install unused features and frameworks.&lt;/p&gt;
+&lt;p&gt;A task to review and update the configurations appropriate to all security notes, updates, and patches as part of the patch management process (see &lt;a href="https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/" target="_blank"&gt;A06:2021-Vulnerable and Outdated Components&lt;/a&gt;). Review cloud storage permissions (e.g., S3 bucket permissions).&lt;/p&gt;
+&lt;p&gt;A segmented application architecture provides effective and secure separation between components or tenants, with segmentation, containerization, or cloud security groups (ACLs).&lt;/p&gt;
+&lt;p&gt;Sending security directives to clients, e.g., Security Headers.&lt;/p&gt;
+&lt;p&gt;An automated process to verify the effectiveness of the configurations and settings in all environments.&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="OWASP - Security Misconfiguration" url="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/"/>
+          </references>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="general" name="General" desc="" library="">
+          <threats>
+            <threat ref="a05-2021-security-misconfiguration" name="A05:2021 – Security Misconfiguration" state="Expose" source="MANUAL" library="">
+              <desc>&lt;p&gt;The application might be vulnerable if the application is:&lt;/p&gt;
+&lt;p&gt;Missing appropriate security hardening across any part of the application stack or improperly configured permissions on cloud services.&lt;/p&gt;
+&lt;p&gt;Unnecessary features are enabled or installed (e.g., unnecessary ports, services, pages, accounts, or privileges).&lt;/p&gt;
+&lt;p&gt;Default accounts and their passwords are still enabled and unchanged.&lt;/p&gt;
+&lt;p&gt;Error handling reveals stack traces or other overly informative error messages to users.&lt;/p&gt;
+&lt;p&gt;For upgraded systems, the latest security features are disabled or not configured securely.&lt;/p&gt;
+&lt;p&gt;The security settings in the application servers, application frameworks (e.g., Struts, Spring, ASP.NET), libraries, databases, etc., are not set to secure values.&lt;/p&gt;
+&lt;p&gt;The server does not send security headers or directives, or they are not set to secure values.&lt;/p&gt;
+&lt;p&gt;The software is out of date or vulnerable (see &lt;a href="https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/" target="_blank"&gt;A06:2021-Vulnerable and Outdated Components&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Without a concerted, repeatable application security configuration process, systems are at a higher risk.&lt;/p&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="a05-2021-security-misconfiguration-preventative-controls" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </riskPattern>
+    <riskPattern uuid="2ec25186-70fb-44d6-b75b-4c54b0aa3035" ref="a06-2021-vulnerable-and-outdated-components" name="A06:2021 - Vulnerable and Outdated Components" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="a06-2021-vulnerable-and-outdated-components-preventative-controls" name="A06:2021 – Vulnerable and Outdated Components -  Preventative Controls" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;h2&gt;How to Prevent&lt;/h2&gt;
+&lt;p&gt;There should be a patch management process in place to:&lt;/p&gt;
+&lt;p&gt;Remove unused dependencies, unnecessary features, components, files, and documentation.&lt;/p&gt;
+&lt;p&gt;Continuously inventory the versions of both client-side and server-side components (e.g., frameworks, libraries) and their dependencies using tools like versions, OWASP Dependency Check, retire.js, etc. Continuously monitor sources like Common Vulnerability and Exposures (CVE) and National Vulnerability Database (NVD) for vulnerabilities in the components. Use software composition analysis tools to automate the process. Subscribe to email alerts for security vulnerabilities related to components you use.&lt;/p&gt;
+&lt;p&gt;Only obtain components from official sources over secure links. Prefer signed packages to reduce the chance of including a modified, malicious component (See A08:2021-Software and Data Integrity Failures).&lt;/p&gt;
+&lt;p&gt;Monitor for libraries and components that are unmaintained or do not create security patches for older versions. If patching is not possible, consider deploying a virtual patch to monitor, detect, or protect against the discovered issue.&lt;/p&gt;
+&lt;p&gt;Every organization must ensure an ongoing plan for monitoring, triaging, and applying updates or configuration changes for the lifetime of the application or portfolio.&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="OWASP - Vulnerable and Outdated Components" url="https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/"/>
+          </references>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="general" name="General" desc="" library="">
+          <threats>
+            <threat ref="a06-2021-vulnerable-and-outdated-components" name="A06:2021 – Vulnerable and Outdated Components" state="Expose" source="MANUAL" library="">
+              <desc>&lt;p&gt;You are likely vulnerable:&lt;/p&gt;
+&lt;p&gt;If you do not know the versions of all components you use (both client-side and server-side). This includes components you directly use as well as nested dependencies.&lt;/p&gt;
+&lt;p&gt;If the software is vulnerable, unsupported, or out of date. This includes the OS, web/application server, database management system (DBMS), applications, APIs and all components, runtime environments, and libraries.&lt;/p&gt;
+&lt;p&gt;If you do not scan for vulnerabilities regularly and subscribe to security bulletins related to the components you use.&lt;/p&gt;
+&lt;p&gt;If you do not fix or upgrade the underlying platform, frameworks, and dependencies in a risk-based, timely fashion. This commonly happens in environments when patching is a monthly or quarterly task under change control, leaving organizations open to days or months of unnecessary exposure to fixed vulnerabilities.&lt;/p&gt;
+&lt;p&gt;If software developers do not test the compatibility of updated, upgraded, or patched libraries.&lt;/p&gt;
+&lt;p&gt;If you do not secure the components’ configurations (see &lt;a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/" target="_blank"&gt;A05:2021-Security Misconfiguration&lt;/a&gt;).&lt;/p&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="a06-2021-vulnerable-and-outdated-components-preventative-controls" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </riskPattern>
+    <riskPattern uuid="8a9d7dff-d37b-47fe-a53d-7e0c2f3c16ef" ref="a07-2021-identification-and-authentication-failures" name="A07:2021 - Identification and Authentication Failures" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="a07-2021-identification-and-authentication-failures-preventative-controls" name="A07:2021 – Identification and Authentication Failures - Preventative Controls" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;h2&gt;How to Prevent&lt;/h2&gt;
+&lt;p&gt;Where possible, implement multi-factor authentication to prevent automated credential stuffing, brute force, and stolen credential reuse attacks.&lt;/p&gt;
+&lt;p&gt;Do not ship or deploy with any default credentials, particularly for admin users.&lt;/p&gt;
+&lt;p&gt;Implement weak password checks, such as testing new or changed passwords against the top 10,000 worst passwords list.&lt;/p&gt;
+&lt;p&gt;Align password length, complexity, and rotation policies with National Institute of Standards and Technology (NIST) 800-63b's guidelines in section 5.1.1 for Memorized Secrets or other modern, evidence-based password policies.&lt;/p&gt;
+&lt;p&gt;Ensure registration, credential recovery, and API pathways are hardened against account enumeration attacks by using the same messages for all outcomes.&lt;/p&gt;
+&lt;p&gt;Limit or increasingly delay failed login attempts, but be careful not to create a denial of service scenario. Log all failures and alert administrators when credential stuffing, brute force, or other attacks are detected.&lt;/p&gt;
+&lt;p&gt;Use a server-side, secure, built-in session manager that generates a new random session ID with high entropy after login. Session identifier should not be in the URL, be securely stored, and invalidated after logout, idle, and absolute timeouts.&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="OWASP - Identification and Authentication Failures" url="https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/"/>
+          </references>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="general" name="General" desc="" library="">
+          <threats>
+            <threat ref="a07-2021-identification-and-authentication-failures" name="A07:2021 – Identification and Authentication Failures" state="Expose" source="MANUAL" library="">
+              <desc>&lt;p&gt;Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be authentication weaknesses if the application:&lt;/p&gt;
+&lt;p&gt;Permits automated attacks such as credential stuffing, where the attacker has a list of valid usernames and passwords.&lt;/p&gt;
+&lt;p&gt;Permits brute force or other automated attacks.&lt;/p&gt;
+&lt;p&gt;Permits default, weak, or well-known passwords, such as "Password1" or "admin/admin".&lt;/p&gt;
+&lt;p&gt;Uses weak or ineffective credential recovery and forgot-password processes, such as "knowledge-based answers," which cannot be made safe.&lt;/p&gt;
+&lt;p&gt;Uses plain text, encrypted, or weakly hashed passwords data stores (see &lt;a href="https://owasp.org/Top10/A02_2021-Cryptographic_Failures/" target="_blank"&gt;A02:2021-Cryptographic Failures&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Has missing or ineffective multi-factor authentication.&lt;/p&gt;
+&lt;p&gt;Exposes session identifier in the URL.&lt;/p&gt;
+&lt;p&gt;Reuse session identifier after successful login.&lt;/p&gt;
+&lt;p&gt;Does not correctly invalidate Session IDs. User sessions or authentication tokens (mainly single sign-on (SSO) tokens) aren't properly invalidated during logout or a period of inactivity.&lt;/p&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="a07-2021-identification-and-authentication-failures-preventative-controls" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </riskPattern>
+    <riskPattern uuid="a9457477-7846-4b17-af3a-704b34b91be4" ref="a08-2021-software-and-data-integrity-failures" name="A08:2021 - Software and Data Integrity Failures" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="a08-2021-software-and-data-integrity-failures-preventative-controls" name="A08:2021 – Software and Data Integrity Failures - Preventative Controls" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;h2&gt;How to Prevent&lt;/h2&gt;
+&lt;p&gt;Use digital signatures or similar mechanisms to verify the software or data is from the expected source and has not been altered.&lt;/p&gt;
+&lt;p&gt;Ensure libraries and dependencies, such as npm or Maven, are consuming trusted repositories. If you have a higher risk profile, consider hosting an internal known-good repository that's vetted.&lt;/p&gt;
+&lt;p&gt;Ensure that a software supply chain security tool, such as OWASP Dependency Check or OWASP CycloneDX, is used to verify that components do not contain known vulnerabilities&lt;/p&gt;
+&lt;p&gt;Ensure that there is a review process for code and configuration changes to minimize the chance that malicious code or configuration could be introduced into your software pipeline.&lt;/p&gt;
+&lt;p&gt;Ensure that your CI/CD pipeline has proper segregation, configuration, and access control to ensure the integrity of the code flowing through the build and deploy processes.&lt;/p&gt;
+&lt;p&gt;Ensure that unsigned or unencrypted serialized data is not sent to untrusted clients without some form of integrity check or digital signature to detect tampering or replay of the serialized data&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="OWASP - Software and Data Integrity Failure" url="https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/"/>
+          </references>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="general" name="General" desc="" library="">
+          <threats>
+            <threat ref="a08-2021-software-and-data-integrity-failures" name="A08:2021 – Software and Data Integrity Failures" state="Expose" source="MANUAL" library="">
+              <desc>&lt;p&gt;Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an application relies upon plugins, libraries, or modules from untrusted sources, repositories, and content delivery networks (CDNs). An insecure CI/CD pipeline can introduce the potential for unauthorized access, malicious code, or system compromise. Lastly, many applications now include auto-update functionality, where updates are downloaded without sufficient integrity verification and applied to the previously trusted application. Attackers could potentially upload their own updates to be distributed and run on all installations. Another example is where objects or data are encoded or serialized into a structure that an attacker can see and modify is vulnerable to insecure deserialization.&lt;/p&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="a08-2021-software-and-data-integrity-failures-preventative-controls" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </riskPattern>
+    <riskPattern uuid="baa919b2-4fd2-4582-b11f-b9aa02434740" ref="a09-2021-security-logging-and-monitoring-failures" name="A09:2021 - Security Logging and Monitoring Failures" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="a09-2021-security-logging-and-monitoring-failures-preventative-controls" name="A09:2021 – Security Logging and Monitoring Failures - Preventative Controls" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;h2&gt;How to Prevent&lt;/h2&gt;
+&lt;p&gt;Developers should implement some or all the following controls, depending on the risk of the application:&lt;/p&gt;
+&lt;p&gt;Ensure all login, access control, and server-side input validation failures can be logged with sufficient user context to identify suspicious or malicious accounts and held for enough time to allow delayed forensic analysis.&lt;/p&gt;
+&lt;p&gt;Ensure that logs are generated in a format that log management solutions can easily consume.&lt;/p&gt;
+&lt;p&gt;Ensure log data is encoded correctly to prevent injections or attacks on the logging or monitoring systems.&lt;/p&gt;
+&lt;p&gt;Ensure high-value transactions have an audit trail with integrity controls to prevent tampering or deletion, such as append-only database tables or similar.&lt;/p&gt;
+&lt;p&gt;DevSecOps teams should establish effective monitoring and alerting such that suspicious activities are detected and responded to quickly.&lt;/p&gt;
+&lt;p&gt;Establish or adopt an incident response and recovery plan, such as National Institute of Standards and Technology (NIST) 800-61r2 or later.&lt;/p&gt;
+&lt;p&gt;There are commercial and open-source application protection frameworks such as the OWASP ModSecurity Core Rule Set, and open-source log correlation software, such as the Elasticsearch, Logstash, Kibana (ELK) stack, that feature custom dashboards and alerting.&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="OWASP - Security Logging and Monitoring Failures" url="https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/"/>
+          </references>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="general" name="General" desc="" library="">
+          <threats>
+            <threat ref="a09-2021-security-logging-and-monitoring-failures" name="A09:2021 – Security Logging and Monitoring Failures" state="Expose" source="MANUAL" library="">
+              <desc>&lt;p&gt;Returning to the OWASP Top 10 2021, this category is to help detect, escalate, and respond to active breaches. Without logging and monitoring, breaches cannot be detected. Insufficient logging, detection, monitoring, and active response occurs any time:&lt;/p&gt;
+&lt;p&gt;Auditable events, such as logins, failed logins, and high-value transactions, are not logged.&lt;/p&gt;
+&lt;p&gt;Warnings and errors generate no, inadequate, or unclear log messages.&lt;/p&gt;
+&lt;p&gt;Logs of applications and APIs are not monitored for suspicious activity.&lt;/p&gt;
+&lt;p&gt;Logs are only stored locally.&lt;/p&gt;
+&lt;p&gt;Appropriate alerting thresholds and response escalation processes are not in place or effective.&lt;/p&gt;
+&lt;p&gt;Penetration testing and scans by dynamic application security testing (DAST) tools (such as OWASP ZAP) do not trigger alerts.&lt;/p&gt;
+&lt;p&gt;The application cannot detect, escalate, or alert for active attacks in real-time or near real-time.&lt;/p&gt;
+&lt;p&gt;You are vulnerable to information leakage by making logging and alerting events visible to a user or an attacker (see &lt;a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/" target="_blank"&gt;A01:2021-Broken Access Control&lt;/a&gt;).&lt;/p&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="a09-2021-security-logging-and-monitoring-failures-preventative-controls" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </riskPattern>
+    <riskPattern uuid="a0dde792-2c2a-469b-82e2-195c624de053" ref="a10-2021-server-side-request-forgery" name="A10:2021 - Server-side Request Forgery" desc="">
+      <tags/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="a10-2021-server-side-request-forgery-ssrf-preventative-controls" name="A10:2021 – Server-Side Request Forgery (SSRF) - Preventative Controls" platform="" cost="0" risk="0" state="Recommended" library="" source="MANUAL">
+          <desc>&lt;h2&gt;How to Prevent&lt;/h2&gt;
+&lt;p&gt;Developers can prevent SSRF by implementing some or all the following defense in depth controls:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;From Network layer&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Segment remote resource access functionality in separate networks to reduce the impact of SSRF&lt;/p&gt;
+&lt;p&gt;Enforce “deny by default” firewall policies or network access control rules to block all but essential intranet traffic.&lt;br&gt;&lt;i&gt;Hints:&lt;/i&gt;&lt;br&gt;~ Establish an ownership and a lifecycle for firewall rules based on applications.&lt;br&gt;~ Log all accepted &lt;i&gt;and&lt;/i&gt; blocked network flows on firewalls (see &lt;a href="https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/" target="_blank"&gt;A09:2021-Security Logging and Monitoring Failures&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;From Application layer:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Sanitize and validate all client-supplied input data&lt;/p&gt;
+&lt;p&gt;Enforce the URL schema, port, and destination with a positive allow list&lt;/p&gt;
+&lt;p&gt;Do not send raw responses to clients&lt;/p&gt;
+&lt;p&gt;Disable HTTP redirections&lt;/p&gt;
+&lt;p&gt;Be aware of the URL consistency to avoid attacks such as DNS rebinding and “time of check, time of use” (TOCTOU) race conditions&lt;/p&gt;
+&lt;p&gt;Do not mitigate SSRF via the use of a deny list or regular expression. Attackers have payload lists, tools, and skills to bypass deny lists.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Additional Measures to consider:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Don't deploy other security relevant services on front systems (e.g. OpenID). Control local traffic on these systems (e.g. localhost)&lt;/p&gt;
+&lt;p&gt;For frontends with dedicated and manageable user groups use network encryption (e.g. VPNs) on independent systems to consider very high protection needs&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="OWASP - Server Side Request Forgery" url="https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/"/>
+          </references>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" enabled="true">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="general" name="General" desc="" library="">
+          <threats>
+            <threat ref="a10-2021-server-side-request-forgery-ssrf" name="A10:2021 – Server-Side Request Forgery (SSRF)" state="Expose" source="MANUAL" library="">
+              <desc>&lt;p&gt;SSRF flaws occur whenever a web application is fetching a remote resource without validating the user-supplied URL. It allows an attacker to coerce the application to send a crafted request to an unexpected destination, even when protected by a firewall, VPN, or another type of network access control list (ACL).&lt;/p&gt;
+&lt;p&gt;As modern web applications provide end-users with convenient features, fetching a URL becomes a common scenario. As a result, the incidence of SSRF is increasing. Also, the severity of SSRF is becoming higher due to cloud services and the complexity of architectures.&lt;/p&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="a10-2021-server-side-request-forgery-ssrf-preventative-controls" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </riskPattern>
+  </riskPatterns>
+  <rules>
+    <rule name="01 - Insert OWASP Questionnaire" module="component" generatedByGui="true">
+      <conditions/>
+      <actions>
+        <action project="" value="OWASP Questions_::_OWASP_::_Which OWASP Top 10 Vulnerability should be Reviewed?_::_1_::_false_::_false_::_" name="INSERT_COMPONENT_QUESTION_GROUP"/>
+      </actions>
+    </rule>
+    <rule name="02 - Insert OWASP Answers" module="component" generatedByGui="true">
+      <conditions>
+        <condition name="CONDITION_COMPONENT_QUESTION_GROUP_EXISTS" field="id" value="OWASP Questions_::_group"/>
+      </conditions>
+      <actions>
+        <action project="" value="A02 Cryptographic Failures_::_A02 Cryptographic Failures_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="A03 Injection_::_A03 Injection_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="A04 Insecure Design_::_A04 Insecure Design_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="A05 Security Misconfiguration_::_A05 Security Misconfiguration_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="A06 Vulnerable and Outdated Components_::_A06 Vulnerable and Outdated Components_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="A07 Identification and Authentication Failures_::_A07 Identification and Authentication Failures_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="A08 Software and Data Integrity Failures_::_A08 Software and Data Integrity Failures_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="A09 Security Logging and Monitoring Failures_::_A09 Security Logging and Monitoring Failures_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="A10 Server-Side Request Forgery (SSRF)_::_A10 Server-Side Request Forgery (SSRF)_::_" name="INSERT_COMPONENT_QUESTION"/>
+        <action project="" value="A01 Broken Access Control_::_A01 Broken Access Control_::_" name="INSERT_COMPONENT_QUESTION"/>
+      </actions>
+    </rule>
+    <rule name="03 - Insert Risk Pattern A01" module="component" generatedByGui="true">
+      <conditions>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="A01 Broken Access Control"/>
+      </conditions>
+      <actions>
+        <action project="owasp-top-10-2021" value="owasp-top-10-2021_::_a01-2021-broken-access-control_::_general_::_a01-2021-broken-access-control" name="IMPORT_SPECIFIC_RISK"/>
+      </actions>
+    </rule>
+    <rule name="04 - Insert Risk Pattern A02" module="component" generatedByGui="true">
+      <conditions>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="A02 Cryptographic Failures"/>
+      </conditions>
+      <actions>
+        <action project="owasp-top-10-2021" value="owasp-top-10-2021_::_a02-2021-cryptographic-failures_::_general_::_a02-2021-cryptographic-failures" name="IMPORT_SPECIFIC_RISK"/>
+      </actions>
+    </rule>
+    <rule name="05 - Insert Risk Pattern A03" module="component" generatedByGui="true">
+      <conditions>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="A03 Injection"/>
+      </conditions>
+      <actions>
+        <action project="owasp-top-10-2021" value="owasp-top-10-2021_::_a03-2021-injection_::_general_::_a03-2021-injection" name="IMPORT_SPECIFIC_RISK"/>
+      </actions>
+    </rule>
+    <rule name="06 - Insert Risk Pattern A04" module="component" generatedByGui="true">
+      <conditions>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="A04 Insecure Design"/>
+      </conditions>
+      <actions>
+        <action project="owasp-top-10-2021" value="owasp-top-10-2021_::_a04-2021-insecure-design_::_general_::_a04-2021-insecure-design" name="IMPORT_SPECIFIC_RISK"/>
+      </actions>
+    </rule>
+    <rule name="07 - Insert Risk Pattern A05" module="component" generatedByGui="true">
+      <conditions>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="A05 Security Misconfiguration"/>
+      </conditions>
+      <actions>
+        <action project="owasp-top-10-2021" value="owasp-top-10-2021_::_a05-2021-security-misconfiguration_::_general_::_a05-2021-security-misconfiguration" name="IMPORT_SPECIFIC_RISK"/>
+      </actions>
+    </rule>
+    <rule name="08 - Insert Risk Pattern A06" module="component" generatedByGui="true">
+      <conditions>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="A06 Vulnerable and Outdated Components"/>
+      </conditions>
+      <actions>
+        <action project="owasp-top-10-2021" value="owasp-top-10-2021_::_a06-2021-vulnerable-and-outdated-components_::_general_::_a06-2021-vulnerable-and-outdated-components" name="IMPORT_SPECIFIC_RISK"/>
+      </actions>
+    </rule>
+    <rule name="09 - Insert Risk Pattern A07" module="component" generatedByGui="true">
+      <conditions>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="A07 Identification and Authentication Failures"/>
+      </conditions>
+      <actions>
+        <action project="owasp-top-10-2021" value="owasp-top-10-2021_::_a07-2021-identification-and-authentication-failures_::_general_::_a07-2021-identification-and-authentication-failures" name="IMPORT_SPECIFIC_RISK"/>
+      </actions>
+    </rule>
+    <rule name="10 - Insert Risk Pattern A08" module="component" generatedByGui="true">
+      <conditions>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="A08 Software and Data Integrity Failures"/>
+      </conditions>
+      <actions>
+        <action project="owasp-top-10-2021" value="owasp-top-10-2021_::_a08-2021-software-and-data-integrity-failures_::_general_::_a08-2021-software-and-data-integrity-failures" name="IMPORT_SPECIFIC_RISK"/>
+      </actions>
+    </rule>
+    <rule name="11 - Insert Risk Pattern A09" module="component" generatedByGui="true">
+      <conditions>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="A09 Security Logging and Monitoring Failures"/>
+      </conditions>
+      <actions>
+        <action project="owasp-top-10-2021" value="owasp-top-10-2021_::_a09-2021-security-logging-and-monitoring-failures_::_general_::_a09-2021-security-logging-and-monitoring-failures" name="IMPORT_SPECIFIC_RISK"/>
+      </actions>
+    </rule>
+    <rule name="12 - Insert Risk Pattern A10" module="component" generatedByGui="true">
+      <conditions>
+        <condition name="CONDITION_COMPONENT_QUESTION" field="id" value="A10 Server-Side Request Forgery (SSRF)"/>
+      </conditions>
+      <actions>
+        <action project="owasp-top-10-2021" value="owasp-top-10-2021_::_a10-2021-server-side-request-forgery_::_general_::_a10-2021-server-side-request-forgery-ssrf" name="IMPORT_SPECIFIC_RISK"/>
+      </actions>
+    </rule>
+  </rules>
+</library>
