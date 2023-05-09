@@ -1,0 +1,2057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template ref="salesforce-integration" name="Salesforce integration" tags="">
+  <desc/>
+  <diagram draft="false">
+    <schema>PG14R3JhcGhNb2RlbCBkeD0iMjQwOCIgZHk9IjEwNTciIGdyaWQ9IjAiIGdyaWRTaXplPSIxMCIgZ3VpZGVzPSIxIiB0b29sdGlwcz0iMSIgY29ubmVjdD0iMSIgYXJyb3dzPSIxIiBmb2xkPSIxIiBwYWdlPSIwIiBwYWdlU2NhbGU9IjEiIHBhZ2VXaWR0aD0iMTEwMCIgcGFnZUhlaWdodD0iODUwIiBtYXRoPSIwIiBzaGFkb3c9IjAiIGlyRHJhd2lvVmVyc2lvbj0iNC45LjAiPgogIDxyb290PgogICAgPG14Q2VsbCBpZD0iMCIvPgogICAgPG14Q2VsbCBpZD0iMSIgcGFyZW50PSIwIi8+CiAgICA8bXhDZWxsIGlkPSIyIiB2YWx1ZT0iUHVibGljIENsb3VkIiBzdHlsZT0iaXIucmVmPWI2MWQ2OTExLTMzOGQtNDZhOC05ZjM5LThkY2QyNGFiZmU5MTtyb3VuZGVkPTE7d2hpdGVTcGFjZT13cmFwO3JlY3Vyc2l2ZVJlc2l6ZT0wO2h0bWw9MTt2ZXJ0aWNhbEFsaWduPXRvcDthbGlnbj1sZWZ0O2Rhc2hlZD0xO3N0cm9rZVdpZHRoPTE7YXJjU2l6ZT0zO2Fic29sdXRlQXJjU2l6ZT0xO3NwYWNpbmdUb3A9MTtzcGFjaW5nTGVmdD0zMjtzdHJva2VDb2xvcj0jNzU3NUVCO2ZpbGxDb2xvcj0jRjBGMEZGO2ZpbGxPcGFjaXR5PTMwO2ZvbnRDb2xvcj0jNTY1MUUwO2Nvbm5lY3RhYmxlPTA7Y29udGFpbmVyPTE7c291cmNlPWlyaXVzcmlzaztpci50eXBlPVRSVVNUWk9ORTsiIHBhcmVudD0iMSIgdmVydGV4PSIxIiBpc1RodW1iPSIwIj4KICAgICAgPG14R2VvbWV0cnkgeD0iLTQzMSIgeT0iNSIgd2lkdGg9IjExMTAiIGhlaWdodD0iNTk3IiBhcz0iZ2VvbWV0cnkiLz4KICAgIDwvbXhDZWxsPgogICAgPG9iamVjdCBsYWJlbD0iU0YgVGVuYW50IiBpci5zb3VyY2VTdHlsZT0icm91bmRlZD0xO3doaXRlU3BhY2U9d3JhcDtodG1sPTE7YWxpZ249Y2VudGVyO2ltYWdlQWxpZ249Y2VudGVyO2ltYWdlV2lkdGg9ODI7aW1hZ2VIZWlnaHQ9ODI7YXJjU2l6ZT05MDthYnNvbHV0ZUFyY1NpemU9MTtzdHJva2VDb2xvcj0jMjBDOUUzO2ZpbGxDb2xvcj0jRTNGQ0ZDO2ZvbnRDb2xvcj0jMDA4NEFEO2ZvbnRTaXplPTEyO3NvdXJjZT1pcml1c3Jpc2s7aXIudHlwZT1DT01QT05FTlQ7aXIuY29tcG9uZW50RGVmaW5pdGlvbi5yZWY9ZW1wdHktY29tcG9uZW50O3ZlcnRpY2FsTGFiZWxQb3NpdGlvbj1taWRkbGU7dmVydGljYWxBbGlnbj1taWRkbGU7aXIuc3luY2hyb25pemVkPTA7IiBpZD0iMTkiPgogICAgICA8bXhDZWxsIHN0eWxlPSJpci5yZWY9Zjc4NWQ0YmItMTc2Ny00ZjA1LWFjYjQtMGNkOWJiZWI3YTkxO3JvdW5kZWQ9MTt3aGl0ZVNwYWNlPXdyYXA7aHRtbD0xO2FsaWduPWxlZnQ7aW1hZ2VBbGlnbj1jZW50ZXI7aW1hZ2VXaWR0aD04MjtpbWFnZUhlaWdodD04MjthcmNTaXplPTM7YWJzb2x1dGVBcmNTaXplPTE7c3Ryb2tlQ29sb3I9IzIwQzlFMztmaWxsQ29sb3I9I0UzRkNGQztmb250Q29sb3I9IzAwODRBRDtmb250U2l6ZT0xMztzb3VyY2U9Y3VzdG9tO2lyLnR5cGU9Q09NUE9ORU5UO2lyLmNvbXBvbmVudERlZmluaXRpb24ucmVmPWVtcHR5LWNvbXBvbmVudDt2ZXJ0aWNhbEFsaWduPXRvcDtpci5zeW5jaHJvbml6ZWQ9MTtjb250YWluZXI9MTtwZXJpbWV0ZXI9cmVjdGFuZ2xlUGVyaW1ldGVyO3JlY3Vyc2l2ZVJlc2l6ZT0wO3N0cm9rZVdpZHRoPTE7dGV4dERpcmVjdGlvbj1sdHI7c3BhY2luZ1RvcD0xO3NwYWNpbmdMZWZ0PTMyOyIgcGFyZW50PSIyIiB2ZXJ0ZXg9IjEiIGlzVGh1bWI9IjAiPgogICAgICAgIDxteEdlb21ldHJ5IHg9IjIzMSIgeT0iMjgiIHdpZHRoPSI4MzYiIGhlaWdodD0iNTQxIiBhcz0iZ2VvbWV0cnkiLz4KICAgICAgPC9teENlbGw+CiAgICA8L29iamVjdD4KICAgIDxvYmplY3QgbGFiZWw9IlRoaXJkIFBhcnR5IEludGVncmF0aW9ucyIgaWQ9IjUiPgogICAgICA8bXhDZWxsIHN0eWxlPSJpci5yZWY9NmE5Zjg2NDgtMzk1Mi00OWU1LTkxMGUtNGY2YTQyOTNiMzA2O3JvdW5kZWQ9MTt3aGl0ZVNwYWNlPXdyYXA7aHRtbD0xO2FsaWduPWNlbnRlcjtpbWFnZUFsaWduPWNlbnRlcjtpbWFnZVdpZHRoPTgyO2ltYWdlSGVpZ2h0PTgyO2FyY1NpemU9OTA7YWJzb2x1dGVBcmNTaXplPTE7c3Ryb2tlQ29sb3I9IzIwQzlFMztmaWxsQ29sb3I9I0UzRkNGQztmb250Q29sb3I9IzAwODRBRDtmb250U2l6ZT0xMjtzb3VyY2U9aXJpdXNyaXNrO2lyLnR5cGU9Q09NUE9ORU5UO2lyLmNvbXBvbmVudERlZmluaXRpb24ucmVmPWVtcHR5LWNvbXBvbmVudDt2ZXJ0aWNhbExhYmVsUG9zaXRpb249bWlkZGxlO3ZlcnRpY2FsQWxpZ249bWlkZGxlO2lyLnN5bmNocm9uaXplZD0xOyIgcGFyZW50PSIxOSIgdmVydGV4PSIxIiBpc1RodW1iPSIwIj4KICAgICAgICA8bXhHZW9tZXRyeSB4PSI1NzMiIHk9IjI4OC41IiB3aWR0aD0iMjQxIiBoZWlnaHQ9IjIwOCIgYXM9Imdlb21ldHJ5Ii8+CiAgICAgIDwvbXhDZWxsPgogICAgPC9vYmplY3Q+CiAgICA8b2JqZWN0IGxhYmVsPSJMb2dnaW5nIGFuZCBNb25pdG9yaW5nIEZ1bmN0aW9ucyIgaWQ9IjYiPgogICAgICA8bXhDZWxsIHN0eWxlPSJpci5yZWY9MTI3NDBkOGEtMDliMC00MDQ1LWI3NjItNWRhN2E5ZTg3OGMzO3JvdW5kZWQ9MTt3aGl0ZVNwYWNlPXdyYXA7aHRtbD0xO2FsaWduPWNlbnRlcjtpbWFnZUFsaWduPWNlbnRlcjtpbWFnZVdpZHRoPTgyO2ltYWdlSGVpZ2h0PTgyO2FyY1NpemU9OTA7YWJzb2x1dGVBcmNTaXplPTE7c3Ryb2tlQ29sb3I9IzIwQzlFMztmaWxsQ29sb3I9I0UzRkNGQztmb250Q29sb3I9IzAwODRBRDtmb250U2l6ZT0xMjtzb3VyY2U9aXJpdXNyaXNrO2lyLnR5cGU9Q09NUE9ORU5UO2lyLmNvbXBvbmVudERlZmluaXRpb24ucmVmPWVtcHR5LWNvbXBvbmVudDt2ZXJ0aWNhbExhYmVsUG9zaXRpb249bWlkZGxlO3ZlcnRpY2FsQWxpZ249bWlkZGxlO2lyLnN5bmNocm9uaXplZD0xOyIgcGFyZW50PSIxOSIgdmVydGV4PSIxIiBpc1RodW1iPSIwIj4KICAgICAgICA8bXhHZW9tZXRyeSB4PSI1NjciIHk9IjQwLjUiIHdpZHRoPSIyNDEiIGhlaWdodD0iMjA4IiBhcz0iZ2VvbWV0cnkiLz4KICAgICAgPC9teENlbGw+CiAgICA8L29iamVjdD4KICAgIDxvYmplY3QgbGFiZWw9IkF1dGhvcml6YXRpb24gRnVuY3Rpb25zIiBpZD0iNCI+CiAgICAgIDxteENlbGwgc3R5bGU9ImlyLnJlZj1lZWI3MWZmOS1hNjRkLTQwYzktODhiNy1kNTk2NzhjNWNmN2I7cm91bmRlZD0xO3doaXRlU3BhY2U9d3JhcDtodG1sPTE7YWxpZ249Y2VudGVyO2ltYWdlQWxpZ249Y2VudGVyO2ltYWdlV2lkdGg9ODI7aW1hZ2VIZWlnaHQ9ODI7YXJjU2l6ZT05MDthYnNvbHV0ZUFyY1NpemU9MTtzdHJva2VDb2xvcj0jMjBDOUUzO2ZpbGxDb2xvcj0jRTNGQ0ZDO2ZvbnRDb2xvcj0jMDA4NEFEO2ZvbnRTaXplPTEyO3NvdXJjZT1pcml1c3Jpc2s7aXIudHlwZT1DT01QT05FTlQ7aXIuY29tcG9uZW50RGVmaW5pdGlvbi5yZWY9ZW1wdHktY29tcG9uZW50O3ZlcnRpY2FsTGFiZWxQb3NpdGlvbj1taWRkbGU7dmVydGljYWxBbGlnbj1taWRkbGU7aXIuc3luY2hyb25pemVkPTE7IiBwYXJlbnQ9IjE5IiB2ZXJ0ZXg9IjEiIGlzVGh1bWI9IjAiPgogICAgICAgIDxteEdlb21ldHJ5IHg9IjI4NyIgeT0iMTExIiB3aWR0aD0iMjQxIiBoZWlnaHQ9IjIwOCIgYXM9Imdlb21ldHJ5Ii8+CiAgICAgIDwvbXhDZWxsPgogICAgPC9vYmplY3Q+CiAgICA8b2JqZWN0IGxhYmVsPSJTRiBBZG1pbiIgaWQ9IjE3Ij4KICAgICAgPG14Q2VsbCBzdHlsZT0iaXIucmVmPTFkMmEwYjQ1LTBkMzktNGEyZi05ZmQxLTQyM2EwMDRiMDFmMDtyb3VuZGVkPTE7d2hpdGVTcGFjZT13cmFwO2h0bWw9MTthbGlnbj1jZW50ZXI7aW1hZ2VBbGlnbj1jZW50ZXI7aW1hZ2VXaWR0aD04MjtpbWFnZUhlaWdodD04MjthcmNTaXplPTkwO2Fic29sdXRlQXJjU2l6ZT0xO3N0cm9rZUNvbG9yPSMyMEM5RTM7ZmlsbENvbG9yPSNFM0ZDRkM7Zm9udENvbG9yPSMwMDg0QUQ7Zm9udFNpemU9MTI7c291cmNlPWlyaXVzcmlzaztpci50eXBlPUNPTVBPTkVOVDtpci5jb21wb25lbnREZWZpbml0aW9uLnJlZj1lbXB0eS1jb21wb25lbnQ7dmVydGljYWxMYWJlbFBvc2l0aW9uPW1pZGRsZTt2ZXJ0aWNhbEFsaWduPW1pZGRsZTtpci5zeW5jaHJvbml6ZWQ9MTsiIHBhcmVudD0iMTkiIHZlcnRleD0iMSIgaXNUaHVtYj0iMCI+CiAgICAgICAgPG14R2VvbWV0cnkgeD0iMzU4IiB5PSI0MTAiIHdpZHRoPSI5MCIgaGVpZ2h0PSI5MCIgYXM9Imdlb21ldHJ5Ii8+CiAgICAgIDwvbXhDZWxsPgogICAgPC9vYmplY3Q+CiAgICA8b2JqZWN0IGxhYmVsPSJBdXRoZW50aWNhdGlvbiBGdW5jdGlvbnMiIGlkPSIzIj4KICAgICAgPG14Q2VsbCBzdHlsZT0icm91bmRlZD0xO3doaXRlU3BhY2U9d3JhcDtodG1sPTE7YWxpZ249Y2VudGVyO2ltYWdlQWxpZ249Y2VudGVyO2ltYWdlV2lkdGg9ODI7aW1hZ2VIZWlnaHQ9ODI7YXJjU2l6ZT05MDthYnNvbHV0ZUFyY1NpemU9MTtzdHJva2VDb2xvcj0jMjBDOUUzO2ZpbGxDb2xvcj0jRTNGQ0ZDO2ZvbnRDb2xvcj0jMDA4NEFEO2ZvbnRTaXplPTEyO3NvdXJjZT1pcml1c3Jpc2s7aXIudHlwZT1DT01QT05FTlQ7aXIuY29tcG9uZW50RGVmaW5pdGlvbi5yZWY9ZW1wdHktY29tcG9uZW50O3ZlcnRpY2FsTGFiZWxQb3NpdGlvbj1taWRkbGU7dmVydGljYWxBbGlnbj1taWRkbGU7aXIuc3luY2hyb25pemVkPTE7aXIucmVmPTFlZjg0M2ZhLWQ2ZDMtNDFjYS1iYzI1LTA2MWRmZjI5OTgwODsiIHBhcmVudD0iMTkiIHZlcnRleD0iMSIgaXNUaHVtYj0iMCI+CiAgICAgICAgPG14R2VvbWV0cnkgeD0iMjAiIHk9IjUxIiB3aWR0aD0iMjQxIiBoZWlnaHQ9IjIwOCIgYXM9Imdlb21ldHJ5Ii8+CiAgICAgIDwvbXhDZWxsPgogICAgPC9vYmplY3Q+CiAgICA8bXhDZWxsIGlkPSIxMiIgdmFsdWU9IkF1dGhlbnRpY2F0aW9uIEZ1bmN0aW9ucyAtJmd0OyBBdXRob3JpemF0aW9uIEZ1bmN0aW9ucyIgc3R5bGU9ImlyLnJlZj0yMWQ3YzE3MS1kNGI0LTRjMzAtYmFjZS1iM2Y2YmNiYzRkMTc7ZWRnZVN0eWxlPW5vbmU7Y3VydmVkPTE7aHRtbD0xO2lyLnN5bmNocm9uaXplZD0xO2VudHJ5WD0wLjU7ZW50cnlZPTA7ZW50cnlEeD0wO2VudHJ5RHk9MDtlbmRBcnJvdz1vcGVuO2VuZEZpbGw9MDtlbmRTaXplPTQ7c291cmNlUGVyaW1ldGVyU3BhY2luZz05O3N0cm9rZUNvbG9yPSNCRkJGQkY7c3Ryb2tlV2lkdGg9MjtleGl0WD0wLjcxODtleGl0WT0wLjAyNDtleGl0RHg9MDtleGl0RHk9MDtleGl0UGVyaW1ldGVyPTA7IiBwYXJlbnQ9IjE5IiBzb3VyY2U9IjMiIHRhcmdldD0iNCIgZWRnZT0iMSI+CiAgICAgIDxteEdlb21ldHJ5IHJlbGF0aXZlPSIxIiBhcz0iZ2VvbWV0cnkiPgogICAgICAgIDxBcnJheSBhcz0icG9pbnRzIj4KICAgICAgICAgIDxteFBvaW50IHg9IjI3NiIgeT0iMjgiLz4KICAgICAgICA8L0FycmF5PgogICAgICA8L214R2VvbWV0cnk+CiAgICA8L214Q2VsbD4KICAgIDxvYmplY3QgbGFiZWw9IlVzZXIgQ3JlYXRpb24gRnVuY3Rpb25zIiBpZD0iMTMiPgogICAgICA8bXhDZWxsIHN0eWxlPSJyb3VuZGVkPTE7d2hpdGVTcGFjZT13cmFwO2h0bWw9MTthbGlnbj1jZW50ZXI7aW1hZ2VBbGlnbj1jZW50ZXI7aW1hZ2VXaWR0aD04MjtpbWFnZUhlaWdodD04MjthcmNTaXplPTkwO2Fic29sdXRlQXJjU2l6ZT0xO3N0cm9rZUNvbG9yPSMyMEM5RTM7ZmlsbENvbG9yPSNFM0ZDRkM7Zm9udENvbG9yPSMwMDg0QUQ7Zm9udFNpemU9MTI7c291cmNlPWlyaXVzcmlzaztpci50eXBlPUNPTVBPTkVOVDtpci5jb21wb25lbnREZWZpbml0aW9uLnJlZj1lbXB0eS1jb21wb25lbnQ7dmVydGljYWxMYWJlbFBvc2l0aW9uPW1pZGRsZTt2ZXJ0aWNhbEFsaWduPW1pZGRsZTtpci5zeW5jaHJvbml6ZWQ9MTtpci5yZWY9MzBkZjQzYjMtOWU4YS00N2I3LWFhZWMtOGRjMjE2MDQ1NTFmOyIgcGFyZW50PSIxOSIgdmVydGV4PSIxIiBpc1RodW1iPSIwIj4KICAgICAgICA8bXhHZW9tZXRyeSB4PSIyMyIgeT0iMzA3IiB3aWR0aD0iMjQxIiBoZWlnaHQ9IjIwOCIgYXM9Imdlb21ldHJ5Ii8+CiAgICAgIDwvbXhDZWxsPgogICAgPC9vYmplY3Q+CiAgICA8bXhDZWxsIGlkPSIxNSIgdmFsdWU9IlVzZXIgQ3JlYXRpb24gRnVuY3Rpb25zIC0mZ3Q7IEF1dGhlbnRpY2F0aW9uIEZ1bmN0aW9ucyIgc3R5bGU9ImlyLnJlZj1jNzJhMDgyYS1hOGMzLTQ5MzgtYTY4MC1mYzYzYmQ2NWJjMTI7ZWRnZVN0eWxlPW5vbmU7Y3VydmVkPTE7aHRtbD0xO2lyLnN5bmNocm9uaXplZD0xO2VuZEFycm93PW9wZW47ZW5kRmlsbD0wO2VuZFNpemU9NDtzb3VyY2VQZXJpbWV0ZXJTcGFjaW5nPTk7c3Ryb2tlQ29sb3I9I0JGQkZCRjtzdHJva2VXaWR0aD0yOyIgcGFyZW50PSIxOSIgc291cmNlPSIxMyIgdGFyZ2V0PSIzIiBlZGdlPSIxIj4KICAgICAgPG14R2VvbWV0cnkgcmVsYXRpdmU9IjEiIGFzPSJnZW9tZXRyeSIvPgogICAgPC9teENlbGw+CiAgICA8bXhDZWxsIGlkPSI5IiB2YWx1ZT0iV2ViIFVJIiBzdHlsZT0icm91bmRlZD0xO3doaXRlU3BhY2U9d3JhcDtodG1sPTE7YWxpZ249Y2VudGVyO2ltYWdlQWxpZ249Y2VudGVyO2ltYWdlV2lkdGg9ODI7aW1hZ2VIZWlnaHQ9ODI7YXJjU2l6ZT05MDthYnNvbHV0ZUFyY1NpemU9MTtzdHJva2VDb2xvcj0jMjBDOUUzO2ZpbGxDb2xvcj0jRTNGQ0ZDO2ZvbnRDb2xvcj0jMDA4NEFEO2ZvbnRTaXplPTEyO3NvdXJjZT1pcml1c3Jpc2s7aXIudHlwZT1DT01QT05FTlQ7aXIuY29tcG9uZW50RGVmaW5pdGlvbi5yZWY9d2ViLXVpO2ltYWdlPWRhdGE6aW1hZ2Uvc3ZnK3htbCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhkcFpIUm9QU0l4SWlCb1pXbG5hSFE5SWpFaUlIWnBaWGRDYjNnOUlqQWdNQ0F4SURFaUlHWnBiR3c5SW01dmJtVWlQaVlqZUdFN1BITjBlV3hsUGlZamVHRTdJQ0FnSUM1cFkyOXVMV1pwYkd3Z2V5WWplR0U3SUNBZ0lDQWdJQ0JtYVd4c09pQWpNVEZCT0VOR095WWplR0U3SUNBZ0lIMG1JM2hoT3p3dmMzUjViR1UrSmlONFlUczhaeUJqYkdsd0xYQmhkR2c5SW5WeWJDZ2pZMnhwY0RBcElqNG1JM2hoT3p4bklHTnNhWEF0Y0dGMGFEMGlkWEpzS0NOamJHbHdNU2tpUGlZamVHRTdQSEJoZEdnZ1pEMGlUVEF1TXpZek5qWTBJREF1TXpnMk56RkRNQzR6T1RrMk56Y2dNQzR6T0RZM01TQXdMalF5T1RFMU55QXdMalF4TkRZNE9TQXdMalF6TVRVMU1TQXdMalExTURBNU5rd3dMalF6TVRjd09DQXdMalExTkRjMU5GWXdMamd3TWpVek5rTXdMalF6TVRjd09DQXdMamd6T0RVME9TQXdMalF3TXpjeU9TQXdMamcyT0RBeU9TQXdMak0yT0RNeU1pQXdMamczTURReU0wd3dMak0yTXpZMk5DQXdMamczTURVNFNEQXVNVGszTkRNNFF6QXVNVFl4TkRJMUlEQXVPRGN3TlRnZ01DNHhNekU1TkRZZ01DNDROREkyTURFZ01DNHhNamsxTlRJZ01DNDRNRGN4T1RSTU1DNHhNamt6T1RVZ01DNDRNREkxTXpaV01DNDBOVFEzTlRSRE1DNHhNamt6T1RVZ01DNDBNVGczTkNBd0xqRTFOek0zTXlBd0xqTTRPVEkyTVNBd0xqRTVNamM0SURBdU16ZzJPRFkzVERBdU1UazNORE00SURBdU16ZzJOekZJTUM0ek5qTTJOalJhVFRBdU16WXpOalkwSURBdU5ETXlNRGN6U0RBdU1UazNORE00UXpBdU1UZzFPVFUySURBdU5ETXlNRGN6SURBdU1UYzJORFkySURBdU5EUXdOakEySURBdU1UYzBPVFkwSURBdU5EVXhOamMzVERBdU1UYzBOelUzSURBdU5EVTBOelUwVmpBdU9EQXlOVE0yUXpBdU1UYzBOelUzSURBdU9ERTBNREU0SURBdU1UZ3pNamtnTUM0NE1qTTFNRGdnTUM0eE9UUXpOakVnTUM0NE1qVXdNVXd3TGpFNU56UXpPQ0F3TGpneU5USXhOMGd3TGpNMk16WTJORU13TGpNM05URTBOaUF3TGpneU5USXhOeUF3TGpNNE5EWXpOaUF3TGpneE5qWTROQ0F3TGpNNE5qRXpPQ0F3TGpnd05UWXhNMHd3TGpNNE5qTTBOU0F3TGpnd01qVXpObFl3TGpRMU5EYzFORU13TGpNNE5qTTBOU0F3TGpRME16STNNaUF3TGpNM056Z3hNaUF3TGpRek16YzRNaUF3TGpNMk5qYzBNU0F3TGpRek1qSTRUREF1TXpZek5qWTBJREF1TkRNeU1EY3pXazB3TGpNd016STROQ0F3TGpjek5EUTVNVU13TGpNeE5UZ3hNU0F3TGpjek5EUTVNU0F3TGpNeU5UazJOU0F3TGpjME5EWTBOaUF3TGpNeU5UazJOU0F3TGpjMU56RTNNME13TGpNeU5UazJOU0F3TGpjMk9EWTFOU0F3TGpNeE56UXpNeUF3TGpjM09ERTBOU0F3TGpNd05qTTJNaUF3TGpjM09UWTBOMHd3TGpNd016STROQ0F3TGpjM09UZzFORWd3TGpJMU56ZzROME13TGpJME5UTTJJREF1TnpjNU9EVTBJREF1TWpNMU1qQTFJREF1TnpZNU5qazVJREF1TWpNMU1qQTFJREF1TnpVM01UY3pRekF1TWpNMU1qQTFJREF1TnpRMU5qa2dNQzR5TkRNM016Z2dNQzQzTXpZeUlEQXVNalUwT0RBNUlEQXVOek0wTmprNFREQXVNalUzT0RnM0lEQXVOek0wTkRreFNEQXVNekF6TWpnMFdrMHdMamM0TnpJek1TQXdMakUwTkRjM05VTXdMamd5TXpJME5TQXdMakUwTkRjM05TQXdMamcxTWpjeU5DQXdMakUzTWpjMU5DQXdMamcxTlRFeE9DQXdMakl3T0RFMk1Vd3dMamcxTlRJM05TQXdMakl4TWpneVZqQXVOVFV6TURSRE1DNDROVFV5TnpVZ01DNDFPRGt3TlRRZ01DNDRNamN5T1RjZ01DNDJNVGcxTXpNZ01DNDNPVEU0T1NBd0xqWXlNRGt5T0V3d0xqYzROekl6TVNBd0xqWXlNVEE0TkVnd0xqWTBNelEwTTFZd0xqY3dOREkxU0RBdU5qZ3hNekEyUXpBdU5qa3pPRE16SURBdU56QTBNalVnTUM0M01ETTVPRGNnTUM0M01UUTBNRFFnTUM0M01ETTVPRGNnTUM0M01qWTVNekZETUM0M01ETTVPRGNnTUM0M016ZzBNVFFnTUM0Mk9UVTBOVFFnTUM0M05EYzVNRE1nTUM0Mk9EUXpPRFFnTUM0M05EazBNRFZNTUM0Mk9ERXpNRFlnTUM0M05EazJNVEpJTUM0ME5qSXdOVFJXTUM0M01EUXlOVWd3TGpVNU9EQTRNVll3TGpZeU1UQTRORWd3TGpRMk1qQTFORll3TGpVM05UY3lNa2d3TGpjNE56SXpNVU13TGpjNU9EY3hOQ0F3TGpVM05UY3lNaUF3TGpnd09ESXdOQ0F3TGpVMk56RTRPU0F3TGpnd09UY3dOaUF3TGpVMU5qRXhPRXd3TGpnd09Ua3hNeUF3TGpVMU16QTBWakF1TWpFeU9ESkRNQzQ0TURrNU1UTWdNQzR5TURFek16Y2dNQzQ0TURFek9DQXdMakU1TVRnME55QXdMamM1TURNd09TQXdMakU1TURNME5Vd3dMamM0TnpJek1TQXdMakU1TURFek9FZ3dMakk0T0RFMk5FTXdMakkzTmpZNE1TQXdMakU1TURFek9DQXdMakkyTnpFNU1TQXdMakU1T0RZM01TQXdMakkyTlRZNE9TQXdMakl3T1RjME1rd3dMakkyTlRRNE1pQXdMakl4TWpneVZqQXVNelUyTkRZNFNEQXVNakl3TVRKV01DNHlNVEk0TWtNd0xqSXlNREV5SURBdU1UYzJPREEySURBdU1qUTRNRGs0SURBdU1UUTNNekkySURBdU1qZ3pOVEExSURBdU1UUTBPVE15VERBdU1qZzRNVFkwSURBdU1UUTBOemMxU0RBdU56ZzNNak14V2lJZ1kyeGhjM005SW1samIyNHRabWxzYkNJdlBpWWplR0U3UEM5blBpWWplR0U3UEM5blBpWWplR0U3UEdSbFpuTStKaU40WVRzOFkyeHBjRkJoZEdnZ2FXUTlJbU5zYVhBd0lqNG1JM2hoT3p4eVpXTjBJSGRwWkhSb1BTSXdMams0TkRZeE5TSWdhR1ZwWjJoMFBTSXdMams0TkRZeE5TSWdabWxzYkQwaWQyaHBkR1VpSUhSeVlXNXpabTl5YlQwaWRISmhibk5zWVhSbEtEQWdNQzR3TVRVek9EQTVLU0l2UGlZamVHRTdQQzlqYkdsd1VHRjBhRDRtSTNoaE96eGpiR2x3VUdGMGFDQnBaRDBpWTJ4cGNERWlQaVlqZUdFN1BISmxZM1FnZDJsa2RHZzlJakF1T0RRMk56WTVJaUJvWldsbmFIUTlJakF1T0RRMk56WTVJaUJtYVd4c1BTSjNhR2wwWlNJZ2RISmhibk5tYjNKdFBTSjBjbUZ1YzJ4aGRHVW9NQzR3TmpnNE5EYzNJREF1TURnME16VXdOaWtpTHo0bUkzaGhPend2WTJ4cGNGQmhkR2crSmlONFlUczhMMlJsWm5NK0ppTjRZVHM4TDNOMlp6ND07dmVydGljYWxMYWJlbFBvc2l0aW9uPWJvdHRvbTt2ZXJ0aWNhbEFsaWduPXRvcDtpci5zeW5jaHJvbml6ZWQ9MTtpci5yZWY9ODRkMmYxYWYtMmJhZS00Y2IxLTk5Y2MtYmEzOWYyM2E3MDk3OyIgcGFyZW50PSIyIiB2ZXJ0ZXg9IjEiIGlzVGh1bWI9IjAiPgogICAgICA8bXhHZW9tZXRyeSB4PSI1NCIgeT0iMTAwIiB3aWR0aD0iOTAiIGhlaWdodD0iOTAiIGFzPSJnZW9tZXRyeSIvPgogICAgPC9teENlbGw+CiAgICA8bXhDZWxsIGlkPSIxMSIgdmFsdWU9IldlYiBVSSAtJmd0OyBBdXRoZW50aWNhdGlvbiBGdW5jdGlvbnMiIHN0eWxlPSJlZGdlU3R5bGU9bm9uZTtjdXJ2ZWQ9MTtodG1sPTE7aXIuc3luY2hyb25pemVkPTE7ZW5kQXJyb3c9b3BlbjtlbmRGaWxsPTA7ZW5kU2l6ZT00O3NvdXJjZVBlcmltZXRlclNwYWNpbmc9OTtzdHJva2VDb2xvcj0jQkZCRkJGO3N0cm9rZVdpZHRoPTI7aXIucmVmPWQzNzZhMGY1LWNlNzUtNGE3MS05MmNhLThmYzI5YjM2MzM2Njtpci50YWdzPUV4aXN0aW5nIFVzZXI7IiBwYXJlbnQ9IjIiIHNvdXJjZT0iOSIgdGFyZ2V0PSIzIiBlZGdlPSIxIj4KICAgICAgPG14R2VvbWV0cnkgcmVsYXRpdmU9IjEiIGFzPSJnZW9tZXRyeSIvPgogICAgPC9teENlbGw+CiAgICA8bXhDZWxsIGlkPSIxNiIgdmFsdWU9IldlYiBVSSAtJmd0OyBVc2VyIENyZWF0aW9uIEZ1bmN0aW9ucyIgc3R5bGU9ImVkZ2VTdHlsZT1ub25lO2N1cnZlZD0xO2h0bWw9MTtpci5zeW5jaHJvbml6ZWQ9MTtlbnRyeVg9MDtlbnRyeVk9MC41O2VudHJ5RHg9MDtlbnRyeUR5PTA7ZW5kQXJyb3c9b3BlbjtlbmRGaWxsPTA7ZW5kU2l6ZT00O3NvdXJjZVBlcmltZXRlclNwYWNpbmc9OTtzdHJva2VDb2xvcj0jQkZCRkJGO3N0cm9rZVdpZHRoPTI7aXIucmVmPWFlM2E0NTM0LWZkYTktNDMyMy05NWI0LWUzYTcxMWI2MWZiMjtpci50YWdzPU5ldyBVc2VyOyIgcGFyZW50PSIyIiBzb3VyY2U9IjkiIHRhcmdldD0iMTMiIGVkZ2U9IjEiPgogICAgICA8bXhHZW9tZXRyeSByZWxhdGl2ZT0iMSIgYXM9Imdlb21ldHJ5Ii8+CiAgICA8L214Q2VsbD4KICAgIDxteENlbGwgaWQ9IjciIHZhbHVlPSJJbnRlcm5ldCIgc3R5bGU9ImlyLnJlZj1mMGJhNzcyMi0zOWI2LTRjODEtODI5MC1hMzBhMjQ4YmI4ZDk7cm91bmRlZD0xO3doaXRlU3BhY2U9d3JhcDtyZWN1cnNpdmVSZXNpemU9MDtodG1sPTE7dmVydGljYWxBbGlnbj10b3A7YWxpZ249bGVmdDtkYXNoZWQ9MTtzdHJva2VXaWR0aD0xO2FyY1NpemU9MzthYnNvbHV0ZUFyY1NpemU9MTtzcGFjaW5nVG9wPTE7c3BhY2luZ0xlZnQ9MzI7c3Ryb2tlQ29sb3I9Izc1NzVFQjtmaWxsQ29sb3I9I0YwRjBGRjtmaWxsT3BhY2l0eT0zMDtmb250Q29sb3I9IzU2NTFFMDtjb25uZWN0YWJsZT0wO2NvbnRhaW5lcj0xO3NvdXJjZT1pcml1c3Jpc2s7aXIudHlwZT1UUlVTVFpPTkU7IiBwYXJlbnQ9IjEiIHZlcnRleD0iMSIgaXNUaHVtYj0iMCI+CiAgICAgIDxteEdlb21ldHJ5IHg9Ii04NTkiIHk9IjUwIiB3aWR0aD0iMzc4IiBoZWlnaHQ9IjE4MCIgYXM9Imdlb21ldHJ5Ii8+CiAgICA8L214Q2VsbD4KICAgIDxvYmplY3QgbGFiZWw9IlNGIFVzZXIiIGlkPSIxOCI+CiAgICAgIDxteENlbGwgc3R5bGU9ImlyLnJlZj1jMDI5ZjE5Zi1kMjg5LTQ3OTItOWE1My05N2ZhNDY0MWFjNGQ7cm91bmRlZD0xO3doaXRlU3BhY2U9d3JhcDtodG1sPTE7YWxpZ249Y2VudGVyO2ltYWdlQWxpZ249Y2VudGVyO2ltYWdlV2lkdGg9ODI7aW1hZ2VIZWlnaHQ9ODI7YXJjU2l6ZT05MDthYnNvbHV0ZUFyY1NpemU9MTtzdHJva2VDb2xvcj0jMjBDOUUzO2ZpbGxDb2xvcj0jRTNGQ0ZDO2ZvbnRDb2xvcj0jMDA4NEFEO2ZvbnRTaXplPTEyO3NvdXJjZT1pcml1c3Jpc2s7aXIudHlwZT1DT01QT05FTlQ7aXIuY29tcG9uZW50RGVmaW5pdGlvbi5yZWY9ZW1wdHktY29tcG9uZW50O3ZlcnRpY2FsTGFiZWxQb3NpdGlvbj1taWRkbGU7dmVydGljYWxBbGlnbj1taWRkbGU7aXIuc3luY2hyb25pemVkPTE7IiBwYXJlbnQ9IjciIHZlcnRleD0iMSIgaXNUaHVtYj0iMCI+CiAgICAgICAgPG14R2VvbWV0cnkgeD0iNDEiIHk9IjQ1IiB3aWR0aD0iOTAiIGhlaWdodD0iOTAiIGFzPSJnZW9tZXRyeSIvPgogICAgICA8L214Q2VsbD4KICAgIDwvb2JqZWN0PgogICAgPG14Q2VsbCBpZD0iMTQiIHZhbHVlPSJTYWxlc2ZvcmNlIGlzIGEgU2FhUyBBcHBsaWNhdGlvbiB0aGF0IGZvciB0aGUgbW9zdCBwYXJ0IG9wZXJhdGVzIGFzIGEgYmxhY2sgYm94IHdoZW4gaXQgY29tZXMgdG8gc2VjdXJpdHkuIFRoaXMgdGhyZWF0IG1vZGVsIHdpbGwgZm9jdXMgb24gYXNzZXNzaW5nIHRoZSBmdW5jdGlvbnMgd2hlcmUgYSB1c2VyIGNhbiBjb250cm9sIHRoZSBzZWN1cml0eSBvZiB0aGUgYXBwbGljYXRpb24iIHN0eWxlPSJ0ZXh0O2h0bWw9MTthbGlnbj1jZW50ZXI7dmVydGljYWxBbGlnbj1taWRkbGU7cmVzaXphYmxlPTA7cG9pbnRzPVtdO2F1dG9zaXplPTE7c3Ryb2tlQ29sb3I9bm9uZTtmaWxsQ29sb3I9bm9uZTtmb250Q29sb3I9IzhDOEM4QzsiIHBhcmVudD0iMSIgdmVydGV4PSIxIj4KICAgICAgPG14R2VvbWV0cnkgeD0iLTY4MyIgeT0iLTM4IiB3aWR0aD0iMTA3NyIgaGVpZ2h0PSIxOCIgYXM9Imdlb21ldHJ5Ii8+CiAgICA8L214Q2VsbD4KICAgIDxteENlbGwgaWQ9IjEwIiB2YWx1ZT0iRW5kIHVzZXIgLSZndDsgV2ViIFVJIiBzdHlsZT0iaXIucmVmPTVlMzMwYmIwLWI4YTgtNDllNy1iZTJlLTU3ZTJlMTkxY2NjNztlZGdlU3R5bGU9bm9uZTtjdXJ2ZWQ9MTtodG1sPTE7aXIuc3luY2hyb25pemVkPTE7ZW50cnlYPTA7ZW50cnlZPTAuNTtlbnRyeUR4PTA7ZW50cnlEeT0wO2VuZEFycm93PW9wZW47ZW5kRmlsbD0wO2VuZFNpemU9NDtzb3VyY2VQZXJpbWV0ZXJTcGFjaW5nPTk7c3Ryb2tlQ29sb3I9I0JGQkZCRjtzdHJva2VXaWR0aD0yO2V4aXRYPTAuOTc4O2V4aXRZPTAuNDIyO2V4aXREeD0wO2V4aXREeT0wO2V4aXRQZXJpbWV0ZXI9MDsiIHBhcmVudD0iMSIgc291cmNlPSIxOCIgdGFyZ2V0PSI5IiBlZGdlPSIxIj4KICAgICAgPG14R2VvbWV0cnkgcmVsYXRpdmU9IjEiIGFzPSJnZW9tZXRyeSI+CiAgICAgICAgPG14UG9pbnQgeD0iLTc0MSIgeT0iMTMzIiBhcz0ic291cmNlUG9pbnQiLz4KICAgICAgPC9teEdlb21ldHJ5PgogICAgPC9teENlbGw+CiAgPC9yb290Pgo8L214R3JhcGhNb2RlbD4K</schema>
+  </diagram>
+  <trustZones>
+    <trustZone ref="internet" uuid="f0ba7722-39b6-4c81-8290-a30a248bb8d9" name="Internet" desc="Untrusted Internet public zone" trustRating="1"/>
+    <trustZone ref="public-cloud" uuid="b61d6911-338d-46a8-9f39-8dcd24abfe91" name="Public Cloud" desc="Public cloud services" trustRating="60"/>
+  </trustZones>
+  <questions/>
+  <assets/>
+  <settings/>
+  <dataflows>
+    <dataflow name="Authentication Functions -&gt; Authorization Functions" ref="21d7c171-d4b4-4c30-bace-b3f6bcbc4d17" source="a8f18ce5-053b-4b75-b66d-ed6519d0744c" target="e41cddb6-6584-401c-84e2-592b0ed5f2cc">
+      <assets/>
+      <tags/>
+    </dataflow>
+    <dataflow name="End user -&gt; Web UI" ref="5e330bb0-b8a8-49e7-be2e-57e2e191ccc7" source="eb7042e8-bc89-4a98-8929-5da7a240372a" target="65cca5f2-5566-4d44-ab6d-5845f80aebd9">
+      <assets/>
+      <tags/>
+    </dataflow>
+    <dataflow name="Web UI -&gt; User Creation Functions" ref="ae3a4534-fda9-4323-95b4-e3a711b61fb2" source="65cca5f2-5566-4d44-ab6d-5845f80aebd9" target="da4bb2c4-fb79-4f10-b0a4-0d6ac893df89">
+      <assets/>
+      <tags>
+        <tag tag="New User"/>
+      </tags>
+    </dataflow>
+    <dataflow name="User Creation Functions -&gt; Authentication Functions" ref="c72a082a-a8c3-4938-a680-fc63bd65bc12" source="da4bb2c4-fb79-4f10-b0a4-0d6ac893df89" target="a8f18ce5-053b-4b75-b66d-ed6519d0744c">
+      <assets/>
+      <tags/>
+    </dataflow>
+    <dataflow name="Web UI -&gt; Authentication Functions" ref="d376a0f5-ce75-4a71-92ca-8fc29b363366" source="65cca5f2-5566-4d44-ab6d-5845f80aebd9" target="a8f18ce5-053b-4b75-b66d-ed6519d0744c">
+      <assets/>
+      <tags>
+        <tag tag="Existing User"/>
+      </tags>
+    </dataflow>
+  </dataflows>
+  <customFields>
+    <customField ref="Message" value=""/>
+    <customField ref="Milestone 1" value=""/>
+    <customField ref="Milestone 1 - Deadline" value=""/>
+    <customField ref="Milestone 2" value=""/>
+    <customField ref="Milestone 2 - Deadline" value=""/>
+    <customField ref="Milestone 3" value=""/>
+    <customField ref="Milestone 3 - Deadline" value=""/>
+    <customField ref="Project Management Details" value=""/>
+    <customField ref="Project Manager" value=""/>
+    <customField ref="Project Owner Email" value="jrabe@iriusrisk.com"/>
+    <customField ref="Release Date" value=""/>
+    <customField ref="Use Case" value=""/>
+    <customField ref="User" value=""/>
+    <customField ref="User Email Field" value=""/>
+  </customFields>
+  <components>
+    <component uuid="dad4d221-245e-47c9-9a90-9cc006490b08" diagramComponentId="c029f19f-d289-4792-9a53-97fa4641ac4d" ref="eb7042e8-bc89-4a98-8929-5da7a240372a" name="SF User" desc="" library="CS-Default" parentComponentRef="" componentDefinitionRef="empty-component">
+      <tags/>
+      <questions/>
+      <trustZones>
+        <trustZone ref="internet"/>
+      </trustZones>
+      <assets/>
+      <settings/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="educate-users-about-phishing" name="Educate users about Phishing" issueId="" issueLink="" platform="" cost="0" risk="62" state="Recommended" owner="JamesRabe" library="" source="MANUAL" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;Salesforce highly recommends phishing education for all Salesforce users. Most cyber attacks use malware (malicious software) to infect a computer with malicious code designed to steal passwords, data, or disrupt an entire computer/network. Fortunately, you don’t need to be a security expert to help stop malware.&lt;/p&gt;
+&lt;p&gt;Phishing scams use fraudulent emails to get users to reveal confidential information. Such emails typically look as though they come from a legitimate organization and may contain links to what appears to be that organization's site (e.g., package delivery, payroll, IRS, social networking), but is actually a fake site or attachment designed to install malware and capture information. As these scams get more sophisticated, it can be tough knowing whether an email is real or fake. Below are some recommendations you should make to your Salesforce users when it comes to reviewing their email (and check out our &lt;a href="https://security.salesforce.com/security-best-practices" target="_blank"&gt;&lt;strong&gt;Security Advisories page&lt;/strong&gt;&lt;/a&gt; for examples of recent scams):&lt;/p&gt;
+&lt;ul&gt;
+ &lt;li&gt;Review the subject line for unexpected messages and awkward language&lt;/li&gt;
+ &lt;li&gt;Verify the person and organization (e.g., hover over the sender name and URLs, but do not click)&lt;/li&gt;
+ &lt;li&gt;Don’t click suspicious attachments (e.g., strange name or format)&lt;/li&gt;
+ &lt;li&gt;Do not give away credential information (e.g., username, password) unless you are sure the email is from a trusted sender&lt;/li&gt;
+ &lt;li&gt;Double check the language (e.g., grammar, spelling)&lt;/li&gt;
+ &lt;li&gt;Be wary of urgent and immediate messages -- especially messages asking for money&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;If you or any of your users are unsure about whether a Salesforce email is legitimate, forward a copy of the suspicious email as an attachment to &lt;a href="mailto:security@salesforce.com" target="_blank"&gt;&lt;strong&gt;security@salesforce.com&lt;/strong&gt;&lt;/a&gt;. Please include the words "phish" or "malware" in the subject line to indicate that the email is a suspected phishing email.&lt;/p&gt;
+&lt;p&gt;For instructions on how to forward an email as an attachment using Gmail, check out &lt;a href="https://support.google.com/mail/search?q=forward+mail+as+an+attachment" target="_blank"&gt;&lt;strong&gt;send emails as attachments in Google Support&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-04-03T17:21:14.809">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="email-social-engineering" name="Email &amp; Social Engineering" desc="" library="">
+          <threats>
+            <threat ref="a-phishing-or-social-engineering-campaign-may-trick-users-into-exposing-credentials" name="A phishing or social engineering campaign may trick users into exposing credentials " state="Expose" source="MANUAL" edited="false" owner="JamesRabe" library="" editable="true">
+              <desc/>
+              <riskRating confidentiality="100" integrity="100" availability="50" easeOfExploitation="25"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="educate-users-about-phishing" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </component>
+    <component uuid="dbc83683-7244-403e-9fb3-29703e86198a" diagramComponentId="1d2a0b45-0d39-4a2f-9fd1-423a004b01f0" ref="39584c0e-15cb-4c2f-aa65-72c28d897f74" name="SF Admin" desc="" library="CS-Default" parentComponentRef="c3f4b806-4e1d-4aa6-87c9-988d01a59ea5" componentDefinitionRef="empty-component">
+      <tags/>
+      <questions/>
+      <trustZones>
+        <trustZone ref="public-cloud"/>
+      </trustZones>
+      <assets/>
+      <settings/>
+      <weaknesses/>
+      <countermeasures/>
+      <usecases/>
+    </component>
+    <component uuid="c6bc671b-1dce-40eb-ad78-dc586d53c845" diagramComponentId="f785d4bb-1767-4f05-acb4-0cd9bbeb7a91" ref="c3f4b806-4e1d-4aa6-87c9-988d01a59ea5" name="SF Tenant" desc="" library="CS-Default" parentComponentRef="" componentDefinitionRef="empty-component">
+      <tags/>
+      <questions/>
+      <trustZones>
+        <trustZone ref="public-cloud"/>
+      </trustZones>
+      <assets/>
+      <settings/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="consider-implementing-salesforce-shield" name="Consider implementing Salesforce Shield" issueId="" issueLink="" platform="" cost="0" risk="66" state="Recommended" owner="JamesRabe" library="" source="MANUAL" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;As part of your overall security strategy, consider Salesforce Shield. While Salesforce is equipped with many out-of-the-box security controls, Shield complements your security features with enhanced encryption, app and data monitoring, and security policy automation. Shield can help admins and developers build a new level of trust and transparency in business-critical apps.&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="Salesforce Shield" url="https://www.salesforce.com/products/platform/products/shield/?_gl=1*3zewdt*_ga*MTMzMzQ1NDUzMS4xNjc0NDg3Mjgy*_ga_HPRCE01J19*MTY4MDEyMDkzNi4xLjAuMTY4MDEyMDkzNi4wLjAuMA.."/>
+          </references>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-04-03T17:10:25.561">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="use-hardware-security-modules-hsms-as-a-root-of-trust" name="Use Hardware Security Modules (HSMs) as a Root of Trust" issueId="" issueLink="" platform="" cost="0" risk="59" state="Recommended" owner="JamesRabe" library="" source="MANUAL" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;A Hardware Security Module is a hardened physical or virtual system used to provide and administrate cryptographic functions in enterprise environments. HSMs are used in conjunction with core security functions including encryption, decryption, and authentication.&lt;/p&gt;
+&lt;p&gt;We recommend HSMs are used as a root of trust to protect keys used to secure data in multiple cloud and on-premise environments. They should be certified to the highest security standards (such as &lt;a href="https://csrc.nist.gov/publications/detail/fips/140/2/final" target="_blank"&gt;&lt;strong&gt;FIPS 140-2&lt;/strong&gt;&lt;/a&gt; and &lt;a href="https://www.commoncriteriaportal.org/" target="_blank"&gt;&lt;strong&gt;Common Criteria&lt;/strong&gt;&lt;/a&gt;), kept isolated from the organization’s corporate networks and restrict access only to authorized personnel.&lt;/p&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-04-03T17:31:19.369">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="cryptographic-keys" name="Cryptographic Keys" desc="" library="">
+          <threats>
+            <threat ref="cryptographic-keys-are-stolen-or-deleted" name="Cryptographic keys are stolen or deleted" state="Expose" source="MANUAL" edited="false" owner="JamesRabe" library="" editable="true">
+              <desc/>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="75"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="use-hardware-security-modules-hsms-as-a-root-of-trust" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+        <usecase ref="tenant-level-threats" name="Tenant Level Threats" desc="" library="">
+          <threats>
+            <threat ref="additional-tenant-wide-protections-are-required" name="Additional Tenant wide protections are required" state="Expose" source="MANUAL" edited="false" owner="JamesRabe" library="" editable="true">
+              <desc/>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="consider-implementing-salesforce-shield" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </component>
+    <component uuid="34277e78-d497-4aef-b9ae-a0fe65f8f2e6" diagramComponentId="30df43b3-9e8a-47b7-aaec-8dc21604551f" ref="da4bb2c4-fb79-4f10-b0a4-0d6ac893df89" name="User Creation Functions" desc="" library="CS-Default" parentComponentRef="c3f4b806-4e1d-4aa6-87c9-988d01a59ea5" componentDefinitionRef="empty-component">
+      <tags/>
+      <questions/>
+      <trustZones>
+        <trustZone ref="public-cloud"/>
+      </trustZones>
+      <assets/>
+      <settings/>
+      <weaknesses/>
+      <countermeasures/>
+      <usecases>
+        <usecase ref="new-user-threats" name="New User Threats" desc="" library="">
+          <threats/>
+        </usecase>
+      </usecases>
+    </component>
+    <component uuid="e237905e-b506-4270-b24e-d905b7efc6e6" diagramComponentId="12740d8a-09b0-4045-b762-5da7a9e878c3" ref="e51f6ef9-d687-42ba-a8ca-77996668dfec" name="Logging and Monitoring Functions" desc="" library="CS-Default" parentComponentRef="c3f4b806-4e1d-4aa6-87c9-988d01a59ea5" componentDefinitionRef="empty-component">
+      <tags/>
+      <questions/>
+      <trustZones>
+        <trustZone ref="public-cloud"/>
+      </trustZones>
+      <assets/>
+      <settings/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="setup-audit-trails-within-salesforce" name="Setup Audit Trails within Salesforce" issueId="" issueLink="" platform="" cost="0" risk="53" state="Recommended" owner="JamesRabe" library="" source="MANUAL" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;Audit logs provide a chronological record of all activities in your system, such as logins, permissions changes, and addition/deletion of records. They are used to detect anomalous use of the system, and are critical in diagnosing potential or actual security issues.&lt;/p&gt;
+&lt;p&gt;We recommend that you set up audit trails for your Salesforce instance, and perform regular audits to monitor for unexpected changes or usage trends.&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="Setup Audit Trails" url="https://help.salesforce.com/s/articleView?id=sf.security_overview_auditing.htm&amp;type=5"/>
+          </references>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-04-03T17:27:52.317">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="auditing-and-logging" name="Auditing and Logging" desc="" library="">
+          <threats>
+            <threat ref="user-actions-are-not-sufficiently-logged-to-monitor-normal-and-malicious-actions" name="User actions are not sufficiently logged to monitor normal and malicious actions" state="Expose" source="MANUAL" edited="false" owner="JamesRabe" library="" editable="true">
+              <desc/>
+              <riskRating confidentiality="100" integrity="100" availability="50" easeOfExploitation="50"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="setup-audit-trails-within-salesforce" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </component>
+    <component uuid="ac34ec4d-ca9b-49b6-9858-1afd793281be" diagramComponentId="84d2f1af-2bae-4cb1-99cc-ba39f23a7097" ref="65cca5f2-5566-4d44-ab6d-5845f80aebd9" name="Web UI" desc="" library="CS-Default" parentComponentRef="" componentDefinitionRef="web-ui">
+      <tags/>
+      <questions/>
+      <trustZones>
+        <trustZone ref="public-cloud"/>
+      </trustZones>
+      <assets/>
+      <settings/>
+      <weaknesses>
+        <weakness ref="CWE-798, CWE-603" name="Client side code stores secret keys, sensitive business logic or other proprietary information" state="0" impact="100" issueId="" issueLink="">
+          <desc>When client side code is fully controlled by the user, a malicious user may be able to read the code or reverse engineer it if it is compiled in any form. If the client side code includes secret keys, sensitive business logic (like client authentication) or proprietary information, all of this is directly exposed to the user, allowing them to get the sensitive information or study the business logic with the aim of bypassing it.&amp;nbsp; 
+&lt;div&gt; 
+ &lt;br /&gt; 
+&lt;/div&gt; 
+&lt;div&gt;
+  Some examples of this vulnerability are:&amp;nbsp; 
+ &lt;div&gt; 
+  &lt;ul&gt; 
+   &lt;li&gt;Performing an authentication on the client side without server side validation.&amp;nbsp;&lt;/li&gt; 
+   &lt;li&gt;Making privileged calls from the client based solely on client side conditions (i.e. a cash check on the client side to place an order on an e-commerce platform).&lt;/li&gt; 
+   &lt;li&gt;&amp;nbsp;Hard-coding keys and secrets on the client side to make client-to-client calls without a proxy.&lt;/li&gt; 
+  &lt;/ul&gt; 
+ &lt;/div&gt; 
+&lt;/div&gt;</desc>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.511">
+              <output/>
+            </source>
+            <references>
+              <reference name="CWE-602: client-side Enforcement of Server-Side Security" url="https://cwe.mitre.org/data/definitions/602.html"/>
+              <reference name="CWE-603: Use of client-side Authentication" url="https://cwe.mitre.org/data/definitions/603.html"/>
+            </references>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </weakness>
+        <weakness ref="CWE-250" name="Execution with Unnecessary Privileges" state="0" impact="100" issueId="" issueLink="">
+          <desc>The software performs an operation at a privilege level that is higher than the minimum level
+                        required, which creates new weaknesses or amplifies the consequences of other weaknesses.
+
+                        New weaknesses can be exposed because running with extra privileges, such as root or
+                        Administrator, can disable the normal security checks being performed by the operating system or
+                        surrounding environment. Other pre-existing weaknesses can turn into security vulnerabilities if
+                        they occur while operating at raised privileges. Privilege management functions can behave in
+                        some less-than-obvious ways, and they have different quirks on different platforms. These
+                        inconsistencies are particularly pronounced if you are transitioning from one non-root user to
+                        another. Signal handlers and spawned processes run at the privilege of the owning process, so if
+                        a process is running as root when a signal fires or a sub-process is executed, the signal
+                        handler or sub-process will operate with root privileges.
+                    </desc>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:47.022">
+              <output/>
+            </source>
+            <references>
+              <reference name="CWE-250: Execution with Unnecessary Privileges" url="https://cwe.mitre.org/data/definitions/250.html"/>
+            </references>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </weakness>
+        <weakness ref="CWE-79" name="Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')" state="0" impact="100" issueId="" issueLink="">
+          <desc>The software does not neutralize or incorrectly neutralizes user-controllable input before it
+                        is placed in output that is used as a web page that is served to other users. Cross-site
+                        scripting (XSS) vulnerabilities occur when:
+                        &lt;ol&gt;
+                        &lt;li&gt;Untrusted data enters a web application, typically from a web request.&lt;/li&gt;
+                        &lt;li&gt;The web application dynamically generates a web page that contains this untrusted
+                        data.&lt;/li&gt;
+                        &lt;li&gt;During page generation, the application does not prevent the data from containing
+                        content that is executable by a web browser, such as JavaScript, HTML tags, HTML attributes,
+                        mouse events, Flash, ActiveX, etc.&lt;/li&gt;
+                        &lt;li&gt;A victim visits the generated web page through a web browser, which contains malicious
+                        script that was injected using the untrusted data.&lt;/li&gt;
+                        &lt;li&gt;Since the script comes from a web page that was sent by the web server, the victim's
+                        web browser executes the malicious script in the context of the web server's domain.&lt;/li&gt;
+                        &lt;li&gt;This effectively violates the intention of the web browser's same-origin policy, which
+                        states that scripts in one domain should not be able to access resources or run code in a
+                        different domain.&lt;/li&gt;
+                        &lt;/ol&gt;There are three main kinds of XSS:
+                        &lt;ul&gt;
+                        &lt;li&gt;&lt;b&gt;Type 1: Reflected XSS (or Non-Persistent)&lt;/b&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;blockquote&gt;
+                        The server reads data directly from the HTTP request and reflects it back in the HTTP response.
+                        Reflected XSS exploits occur when an attacker causes a victim to supply dangerous content to a
+                        vulnerable web application, which is then reflected back to the victim and executed by the web
+                        browser. The most common mechanism for delivering malicious content is to include it as a
+                        parameter in a URL that is posted publicly or e-mailed directly to the victim. URLs constructed
+                        in this manner constitute the core of many phishing schemes, whereby an attacker convinces a
+                        victim to visit a URL that refers to a vulnerable site. After the site reflects the attacker's
+                        content back to the victim, the content is executed by the victim's browser.
+                        &lt;/blockquote&gt;
+                        &lt;ul&gt;
+                        &lt;li&gt;&lt;b&gt;Type 2: Stored XSS (or Persistent)&lt;/b&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;blockquote&gt;
+                        The application stores dangerous data in a database, message forum, visitor log, or other
+                        trusted data store. At a later time, the dangerous data is subsequently read back into the
+                        application and included in dynamic content. From an attacker's perspective, the optimal place
+                        to inject malicious content is in an area that is displayed to either many users or particularly
+                        interesting users. Interesting users typically have elevated privileges in the application or
+                        interact with sensitive data that is valuable to the attacker. If one of these users executes
+                        malicious content, the attacker may be able to perform privileged operations on behalf of the
+                        user or gain access to sensitive data belonging to the user. For example, the attacker might
+                        inject XSS into a log message, which might not be handled properly when an administrator views
+                        the logs.
+                        &lt;/blockquote&gt;
+                        &lt;ul&gt;
+                        &lt;li&gt;&lt;b&gt;Type 0: DOM-Based XSS&lt;/b&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;blockquote&gt;
+                        In DOM-based XSS, the client performs the injection of XSS into the page; in the other types,
+                        the server performs the injection. DOM-based XSS generally involves server-controlled, trusted
+                        script that is sent to the client, such as Javascript that performs sanity checks on a form
+                        before the user submits it. If the server-supplied script processes user-supplied data and then
+                        injects it back into the web page (such as with dynamic HTML), then DOM-based XSS is
+                        possible.Once the malicious script is injected, the attacker can perform a variety of malicious
+                        activities. The attacker could transfer private information, such as cookies that may include
+                        session information, from the victim's machine to the attacker. The attacker could send
+                        malicious requests to a web site on behalf of the victim, which could be especially dangerous to
+                        the site if the victim has administrator privileges to manage that site. Phishing attacks could
+                        be used to emulate trusted web sites and trick the victim into entering a password, allowing the
+                        attacker to compromise the victim's account on that web site. Finally, the script could exploit
+                        a vulnerability in the web browser itself possibly taking over the victim's machine, sometimes
+                        referred to as &amp;quot;drive-by hacking&amp;quot;.
+                        &lt;/blockquote&gt;
+                        &lt;blockquote&gt;
+                        &lt;br /&gt;
+                        &lt;/blockquote&gt;In many cases, the attack can be launched without the victim even being aware
+                        of it. Even with careful users, attackers frequently use a variety of methods to encode the
+                        malicious portion of the attack, such as URL encoding or Unicode, so the request looks less
+                        suspicious.
+                    </desc>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:47.021">
+              <output/>
+            </source>
+            <references>
+              <reference name="CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')" url="https://cwe.mitre.org/data/definitions/79.html"/>
+            </references>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </weakness>
+        <weakness ref="CWE-830" name="Inclusion of Web Functionality from an Untrusted Source" state="0" impact="100" issueId="" issueLink="">
+          <desc>The software includes web functionality (such as a web widget)
+                        from another domain, which causes it to operate within the domain of the
+                        software, potentially granting total access and control of the software to the
+                        untrusted source.
+                    </desc>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.843">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </weakness>
+        <weakness ref="CWE-20" name="Input to exported activities, intents or content providers is not validated" state="0" impact="100" issueId="" issueLink="">
+          <desc>The product does not validate or incorrectly validates input that can affect the control flow
+                        or data flow of a program.
+
+                        When software does not validate input properly, an attacker is able to craft the input in a form
+                        that is not expected by the rest of the application. This will lead to parts of the system
+                        receiving unintended input, which may result in altered control flow, arbitrary control of a
+                        resource, or arbitrary code execution.
+                    </desc>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.716">
+              <output/>
+            </source>
+            <references>
+              <reference name="CWE-20: Input to exported activities, intents or content providers is not validated" url="https://cwe.mitre.org/data/definitions/20.html"/>
+            </references>
+            <customFields/>
+          </test>
+        </weakness>
+        <weakness ref="CWE-693-NOSNIFF" name="Internet Explorer could allow Cross Site Scripting attacks through content sniffing" state="0" impact="100" issueId="" issueLink="">
+          <desc>&lt;p&gt;The product does not use - or incorrectly uses - a protection mechanism providing defense against attacks on the product. This weakness covers three distinct situations:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;A "missing" protection mechanism occurs when the application does not define any mechanism against a certain class of attack.&lt;/li&gt;&lt;li&gt;An "insufficient" protection mechanism might provide some defenses - for example, against the most common attacks - but it does not protect against everything that is intended.&lt;/li&gt;&lt;li&gt;An "ignored" mechanism occurs when a mechanism is available and in active use within the product, but the developer has not applied it in some code path.&lt;/li&gt;&lt;/ul&gt;</desc>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:47.021">
+              <output/>
+            </source>
+            <references>
+              <reference name="CWE-693: Protection Mechanism Failure" url="https://cwe.mitre.org/data/definitions/693.html"/>
+            </references>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </weakness>
+        <weakness ref="CWE-84-HTTP-ONLY" name="Lack of 'HttpOnly' flag on session cookie" state="0" impact="100" issueId="" issueLink="">
+          <desc>&lt;p&gt;The web application improperly neutralizes user-controlled input for executable scripts disguised with URI encodings.&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;/p&gt;</desc>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:47.021">
+              <output/>
+            </source>
+            <references>
+              <reference name="CWE-84: Improper Neutralization of Encoded URI Schemes in a Web Page" url="https://cwe.mitre.org/data/definitions/84.html"/>
+            </references>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </weakness>
+        <weakness ref="WEB-CSP" name="Lack of Content Security Policy version 2 (CSPv2)" state="0" impact="100" issueId="" issueLink="">
+          <desc>Content Security Policy (CSP) is a computer security standard introduced to prevent cross-site
+                        scripting (XSS), click jacking and other code injection attacks resulting from execution of
+                        malicious content in the trusted web page context.
+                    </desc>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:47.021">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </weakness>
+        <weakness ref="lack-automated-vuln-identification" name="Lack of automated vulnerability identification" state="0" impact="100" issueId="" issueLink="">
+          <desc>Developmental security testing/evaluation is not enforced during post-design phases of the system development life cycle. Such testing/evaluation is necessary because it confirms that the required security controls are implemented correctly, operating as intended, enforcing the desired security policy, and meeting established security requirements.</desc>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.330">
+              <output/>
+            </source>
+            <references>
+              <reference name="Risk-Based and Functional Security Testing" url="https://www.us-cert.gov/bsi/articles/best-practices/security-testing/risk-based-and-functional-security-testing"/>
+            </references>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </weakness>
+        <weakness ref="CWE-311" name="Missing Encryption of Sensitive Data" state="0" impact="100" issueId="" issueLink="">
+          <desc>The software does not encrypt sensitive or critical information
+                        before storage or transmission.
+                    </desc>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.512">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </weakness>
+        <weakness ref="CWE-312" name="Secrets, API keys and or passwords are included in the source code or online repositories" state="0" impact="100" issueId="" issueLink="">
+          <desc>API keys, passwords or secrets included in the source code or in the configuration files can be leaked to users with access to the code. This access can be incidentally granted by publishing the source code on a package-form or an online, public repository.
+
+          The unauthorized access to any of those secrets could lead to a compromise of sensitive data or a system.</desc>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.512">
+              <output/>
+            </source>
+            <references>
+              <reference name="CWE-312: Secrets, API keys and or passwords are included in the source code or online repositories" url="https://cwe.mitre.org/data/definitions/312.html"/>
+            </references>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </weakness>
+        <weakness ref="CWE-693-CLICKJACK" name="The page can be included in an iframe" state="0" impact="100" issueId="" issueLink="">
+          <desc>The product does not use or incorrectly uses a protection mechanism that provides sufficient
+                        defense against directed attacks against the product. This weakness covers three distinct
+                        situations:
+                        &lt;div&gt;
+                        &lt;ul&gt;
+                        &lt;li&gt;A &amp;quot;missing&amp;quot; protection mechanism occurs when the application does
+                        not define any mechanism against a certain class of attack.&amp;nbsp;&lt;/li&gt;
+                        &lt;li&gt;An &amp;quot;insufficient&amp;quot; protection mechanism might provide some defenses -
+                        for example, against the most common attacks - but it does not protect against everything that
+                        is intended.&amp;nbsp;&lt;/li&gt;
+                        &lt;li&gt;Finally, an &amp;quot;ignored&amp;quot; mechanism occurs when a mechanism is available
+                        and in active use within the product, but the developer has not applied it in some code path.&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;/div&gt;
+                    </desc>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:47.022">
+              <output/>
+            </source>
+            <references>
+              <reference name="CWE-693: Protection Mechanism Failure" url="https://cwe.mitre.org/data/definitions/693.html"/>
+            </references>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </weakness>
+        <weakness ref="CWE-477" name="Use of Obsolete Function" state="0" impact="75" issueId="" issueLink="">
+          <desc>The code uses deprecated or obsolete functions, which suggests that the code has not been actively reviewed or maintained.
+&lt;br /&gt;</desc>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.511">
+              <output/>
+            </source>
+            <references>
+              <reference name="CWE-477: Use of Obsolete Function" url="https://cwe.mitre.org/data/definitions/477.html"/>
+            </references>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </weakness>
+        <weakness ref="CWE-327" name="Use of a Broken or Risky Cryptographic Algorithm" state="0" impact="100" issueId="" issueLink="">
+          <desc>The use of a broken or risky cryptographic algorithm is an unnecessary risk that may result in
+                        the exposure of sensitive information.
+                    </desc>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.512">
+              <output/>
+            </source>
+            <references>
+              <reference name="CWE-327: Use of a Broken or Risky Cryptographic Algorithm" url="https://cwe.mitre.org/data/definitions/327.html"/>
+            </references>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </weakness>
+      </weaknesses>
+      <countermeasures>
+        <countermeasure ref="decrease-session-timeout-thresholds" name="Decrease Session Timeout Thresholds" issueId="" issueLink="" platform="" cost="0" risk="45" state="Recommended" owner="JamesRabe" library="" source="MANUAL" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;Users sometimes leave their computers unattended or they don't log off. You can protect your applications against unauthorized access by automatically closing sessions when there is no session activity for a period of time. The default timeout is 2 hours; you can set this value from between 30 minutes and 8 hours. To change the session timeout, click: Setup &amp;gt; Security Controls &amp;gt; Session Settings.&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="Developer documentation on Session Security" url="https://developer.salesforce.com/docs/atlas.en-us.securityImplGuide.meta/securityImplGuide/security_overview_sessions.htm?search_text=session%20timeout"/>
+          </references>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-04-03T17:18:00.278">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="WEB-CSP" name="Define a restrictive 'least privilege' Content Security Policy" issueId="" issueLink="" platform="" cost="1" risk="40" state="Recommended" owner="JamesRabe" library="CS-Default" source="RULES" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;The Content-Security-Policy instructs compliant browsers on how they may interact with external sites while in the current context. This enables the server to control interactive code and content from third parties, mitigating some client-side code injection attacks. The policy allows the server to specify what connections are permitted for each type of resource.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;For example, the following policy tells the browser to allow connections (including websockets) to the same domain to which the page was served: *.iriusrisk.com.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' wss://*.iriusrisk.com; img-src 'self' data:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Define and set a Content-Security-Policy with least-privileges to allow only those interactions which are explicitly required.&lt;/li&gt;&lt;/ul&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="OSA CM-02 Baseline Configuration" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/153-08_02_CM-02"/>
+            <reference name="OSA CM-06 Configuration Settings" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/157-08_02_CM-06"/>
+            <reference name="OWASP Secure Headers Project" url="https://www.owasp.org/index.php/OWASP_Secure_Headers_Project"/>
+          </references>
+          <standards>
+            <standard ref="12.6.1" supportedStandardRef="ISO/IEC 27002:2013"/>
+            <standard ref="14.4.3" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="14.4.3" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="14.4.3" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="14.4.7" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="14.4.7" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="14.4.7" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="5.3.6" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="5.3.6" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="5.3.6" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="CM-2" supportedStandardRef="NIST 800-53"/>
+            <standard ref="CM-6" supportedStandardRef="NIST 800-53"/>
+            <standard ref="DE.AE-1" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.DS-7" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.IP-1" supportedStandardRef="nist-csf"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps>&lt;ol&gt;&lt;li&gt;Review the HTTP Server responses to determine if a&amp;nbsp;&lt;i&gt;Content-Security-Policy&amp;nbsp;&lt;/i&gt;header is returned, and if so, that it follows the security practice of least-privilege.&lt;/li&gt;&lt;li&gt;Using a browser:&lt;/li&gt;&lt;li&gt;Open the Web Developer Console.&lt;ul&gt;&lt;li&gt;Make requests to the different component end-points.&lt;/li&gt;&lt;li&gt;Verify the header is always returned as part of these responses&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Using an intercepting proxy (e.g. OWASP Zap, BurpSuite):&lt;ul&gt;&lt;li&gt;Browse the site through the proxy.&lt;/li&gt;&lt;li&gt;Review server responses and/or use automated scanning to analyze headers.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;For more information on &lt;i&gt;Content-Security-Policy&lt;/i&gt; policy setup, see:&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP&lt;/a&gt;&lt;/p&gt;</steps>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.929">
+              <output/>
+            </source>
+            <references>
+              <reference name="Mozilla Developer Documentation - CSP" url="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"/>
+            </references>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="CWE-319-TRANSPORT" name="Encrypt data between the client and server/service" issueId="" issueLink="" platform="" cost="0" risk="53" state="Recommended" owner="JamesRabe" library="CS-Default" source="RULES" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;Data passed between the client and server should be protected by encryption in transit.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Implement cryptographically strong TLS end-to-end encryption between the client and server, terminating within a secure environment on the server-side.&lt;/li&gt;&lt;li&gt;Consider use of client certificates to prevent interception of (or man-in-the-middle attacks on) the encrypted connection.&lt;/li&gt;&lt;li&gt;Alternatively, asymmetric (public-key) encryption could be utilized and a recognized, proven, and tested implementation/library should be used&lt;/li&gt;&lt;/ul&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="OSA AC-03 Access Enforcement" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/25-08_02_AC-03"/>
+            <reference name="OSA AC-06 Least Privilege" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/28-08_02_AC-06"/>
+            <reference name="OSA AC-14 Permitted Actions Without Identification Or Authentication" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/38-08_02_AC-14"/>
+            <reference name="OSA AC-16 Automated Labeling" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/198-08_02_AC-16"/>
+            <reference name="OSA SC-08 Transmission Integrity" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/68-08_02_SC-08"/>
+            <reference name="OSA SC-13 Use Of Cryptography" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/73-08_02_SC-13"/>
+          </references>
+          <standards>
+            <standard ref="1.9.1" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="1.9.1" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="13.2.1" supportedStandardRef="ISO/IEC 27002:2013"/>
+            <standard ref="13.2.6" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="13.2.6" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="164.312(a)(1)(D)" supportedStandardRef="hipaa-addressable"/>
+            <standard ref="164.312(e)(1)(A)" supportedStandardRef="hipaa-addressable"/>
+            <standard ref="5.1" supportedStandardRef="OWASP-MASVS-L1"/>
+            <standard ref="5.1" supportedStandardRef="OWASP-MASVS-L1+R"/>
+            <standard ref="5.1" supportedStandardRef="OWASP-MASVS-L2"/>
+            <standard ref="5.1" supportedStandardRef="OWASP-MASVS-L2+R"/>
+            <standard ref="9.1.1" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="9.1.1" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="9.1.1" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="9.2.2" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="9.2.2" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="9.2.3" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="9.2.3" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="9.2.4" supportedStandardRef="ISO/IEC 27002:2013"/>
+            <standard ref="9.4.3" supportedStandardRef="ISO/IEC 27002:2013"/>
+            <standard ref="AC-14" supportedStandardRef="fedramp-high-baseline"/>
+            <standard ref="AC-14" supportedStandardRef="fedramp-low-baseline"/>
+            <standard ref="AC-14" supportedStandardRef="fedramp-moderate-baseline"/>
+            <standard ref="AC-14" supportedStandardRef="NIST 800-53"/>
+            <standard ref="AC-16" supportedStandardRef="NIST 800-53"/>
+            <standard ref="AC-3" supportedStandardRef="fedramp-high-baseline"/>
+            <standard ref="AC-3" supportedStandardRef="fedramp-low-baseline"/>
+            <standard ref="AC-3" supportedStandardRef="fedramp-moderate-baseline"/>
+            <standard ref="AC-3" supportedStandardRef="NIST 800-53"/>
+            <standard ref="AC-6" supportedStandardRef="fedramp-high-baseline"/>
+            <standard ref="AC-6" supportedStandardRef="fedramp-moderate-baseline"/>
+            <standard ref="AC-6" supportedStandardRef="NIST 800-53"/>
+            <standard ref="PR.AC-4" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.AC-6" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.AC-7" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.DS-2" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.DS-5" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.PT-3" supportedStandardRef="nist-csf"/>
+            <standard ref="SC-13" supportedStandardRef="fedramp-high-baseline"/>
+            <standard ref="SC-13" supportedStandardRef="fedramp-low-baseline"/>
+            <standard ref="SC-13" supportedStandardRef="fedramp-moderate-baseline"/>
+            <standard ref="SC-13" supportedStandardRef="NIST 800-53"/>
+            <standard ref="SC-8" supportedStandardRef="fedramp-high-baseline"/>
+            <standard ref="SC-8" supportedStandardRef="fedramp-moderate-baseline"/>
+            <standard ref="SC-8" supportedStandardRef="NIST 800-53"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps>&lt;ol&gt;&lt;li&gt;Check client to server connections use and enforce established encryption protocols, e.g. TLSv1.2.&lt;br&gt;&amp;nbsp;&lt;/li&gt;&lt;li&gt;Verify only strong cipher suites are in use and permitted.&lt;/li&gt;&lt;li&gt;Ensure attempts to use unencrypted transport mechanisms are rejected or redirected (e.g. HTTP instead of HTTPS)&lt;/li&gt;&lt;li&gt;Review configuration of protocols and services against best-practice guidelines.&lt;/li&gt;&lt;/ol&gt;</steps>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.425">
+              <output/>
+            </source>
+            <references>
+              <reference name="Server Side TLS Configuration" url="https://wiki.mozilla.org/Security/Server_Side_TLS"/>
+            </references>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="ASSETS-HOSTED-BY-APP" name="Ensure that all application assets are hosted by the application" issueId="" issueLink="" platform="" cost="0" risk="45" state="Recommended" owner="JamesRabe" library="CS-Default" source="RULES" edited="false" stateChangeSource="" priority="">
+          <desc>Review periodically all assets which are accessed by the application and ensure that these
+                        assets are hosted by the application. If this is not the case and there are assets in external
+                        providers or a CDN, you shall move these assets to be hosted by the application and remove them
+                        from external providers or CDNs.
+                    </desc>
+          <implementations/>
+          <references>
+            <reference name="OSA SI-07 Software And Information Integrity" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/45-08_02_SI-07"/>
+          </references>
+          <standards>
+            <standard ref="14.2.3" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="14.2.3" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="14.2.3" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="PR.DS-6" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.DS-8" supportedStandardRef="nist-csf"/>
+            <standard ref="SI-7" supportedStandardRef="NIST 800-53"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps>Check that all assets are hosted by the application, and not by external providers.
+                        </steps>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.806">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="INS-CLIENT" name="Ensure the application does not use unsupported, insecure, or deprecated client-side technologies" issueId="" issueLink="" platform="" cost="0" risk="46" state="Recommended" owner="JamesRabe" library="CS-Default" source="RULES" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;Ensure the application does not use unsupported, insecure, or deprecated client-side technologies such as: NSAPI plugins, Flash, Shockwave, ActiveX, Silverlight, NACL, or client-side Java applets.&lt;/p&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards>
+            <standard ref="1.14.6" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="1.14.6" supportedStandardRef="owasp-asvs4-level-3"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps>&lt;ul&gt;
+ &lt;li&gt;Test the presence of any client side applet such as Flash, ActiveX and Silverlight.&lt;/li&gt;
+&lt;/ul&gt;</steps>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.425">
+              <output/>
+            </source>
+            <references>
+              <reference name="Testing Information Gathering" url="https://www.owasp.org/index.php/Testing_Information_Gathering"/>
+            </references>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="implement-my-domain" name="Implement &quot;My Domain&quot;" issueId="" issueLink="" platform="" cost="0" risk="66" state="Recommended" owner="JamesRabe" library="" source="MANUAL" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;My Domain allows you to add a custom domain to your Salesforce org URL. Having a custom domain lets you highlight your brand and makes your org more secure. Additionally, this allows you to follow our best practices of not specifying instance names in code and integrations (e.g. na1.salesforce.com). Following this best practice will provide you and your end-users a more seamless experience during any future maintenance.&lt;/p&gt;
+&lt;p&gt;Using My Domain, you define a custom domain that's part of your Salesforce domain. A custom domain is actually a subdomain of a primary domain. If we use an example of Universal Containers, their subdomain would be “universal-containers” in this My Domain example: https://universal-containers.my.salesforce.com.&lt;/p&gt;
+&lt;p&gt;A custom domain name helps you better manage login and authentication for your org in several key ways. You can:&lt;/p&gt;
+&lt;ul&gt;
+ &lt;li&gt;Block or redirect page requests that don’t use the new domain name&lt;/li&gt;
+ &lt;li&gt;Set custom login policy to determine how users are authenticated&lt;/li&gt;
+ &lt;li&gt;Work in multiple Salesforce orgs at the same time&lt;/li&gt;
+ &lt;li&gt;Let users log in using a social account, like Google and Facebook, from the login page&lt;/li&gt;
+ &lt;li&gt;Allow users to log in once to access external services&lt;/li&gt;
+ &lt;li&gt;Highlight your business identity with your unique domain URL&lt;/li&gt;
+ &lt;li&gt;Brand your login screen and customize right-frame content&lt;/li&gt;
+&lt;/ul&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="How to implement My Domain" url="https://help.salesforce.com/apex/HTViewHelpDoc?id=domain_name_overview.htm&amp;language=en_US"/>
+          </references>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-04-03T17:15:48.267">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="CS-CLIENT-SECRET" name="Implement sensitive logic and data validation on the server-side" issueId="" issueLink="" platform="" cost="1" risk="59" state="Recommended" owner="JamesRabe" library="CS-Default" source="RULES" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;All data and functionalities on the client-side must be considered tainted and subject to manipulation by a malicious actor, regardless of the controls in place (e.g. encryption or obfuscation of client-side code or content). &lt;/p&gt; This includes application logic decisions, such as access controls, and data considered sensitive or secret, such as encryption keys. While controls may be duplicated on the client-side to improve the user experience, it is important to have these enforced on the server-side.&amp;nbsp; 
+&lt;div&gt; 
+ &lt;ul&gt; 
+  &lt;li&gt;Business logic, in particular access controls, must be implemented on the server-side.&lt;/li&gt; 
+  &lt;li&gt;Secret data should be stored on the server-side, and only what is explicitly required should be duplicated on the client-side.&amp;nbsp;&lt;/li&gt; 
+ &lt;/ul&gt;All data provided from the client-side (even from binary clients) should be considered tainted, and security decisions should not be made solely on this data. For example, an insecure implementation could include a compiled application (e.g. Flash!) performing authentication on the client-side against a stored password. The decompilation of the binary (in this case flv file) or the interception and modification of controls between the client and server could expose the password or allow unauthorized access to the authenticated application content. 
+&lt;/div&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="OSA AC-01 Access Control Policies and Procedures" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/23-08_02_AC-01"/>
+            <reference name="OSA SI-10 Information Accuracy, Completeness, Validity, And Authenticity" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/48-08_02_SI-10"/>
+            <reference name="OWASP Juice Shop: Broken Access Control" url="https://pwning.owasp-juice.shop/part2/broken-access-control.html"/>
+            <reference name="OWASP Juice Shop: Injection" url="https://pwning.owasp-juice.shop/part2/injection.html"/>
+          </references>
+          <standards>
+            <standard ref="12.2.1" supportedStandardRef="ISO/IEC 27002:2013"/>
+            <standard ref="2.4.11.7" supportedStandardRef="iotsf-class-0"/>
+            <standard ref="2.4.11.7" supportedStandardRef="iotsf-class-1"/>
+            <standard ref="2.4.11.7" supportedStandardRef="iotsf-class-2"/>
+            <standard ref="4.1.1" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="4.1.1" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="4.1.1" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="A01:2021-Broken Access Control" supportedStandardRef="owasp-top-10-2021"/>
+            <standard ref="A03:2021-Injection" supportedStandardRef="owasp-top-10-2021"/>
+            <standard ref="A1:2017-Injection" supportedStandardRef="owasp-top-10-2017"/>
+            <standard ref="A5:2017-Broken Access Control" supportedStandardRef="owasp-top-10-2017"/>
+            <standard ref="AC-1" supportedStandardRef="fedramp-high-baseline"/>
+            <standard ref="AC-1" supportedStandardRef="fedramp-low-baseline"/>
+            <standard ref="AC-1" supportedStandardRef="fedramp-moderate-baseline"/>
+            <standard ref="AC-1" supportedStandardRef="NIST 800-53"/>
+            <standard ref="AC-24" supportedStandardRef="NIST 800-53"/>
+            <standard ref="ID.GV-1" supportedStandardRef="nist-csf"/>
+            <standard ref="ID.GV-3" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.AC-1" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.AC-3" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.AC-4" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.AC-6" supportedStandardRef="nist-csf"/>
+            <standard ref="SI-10" supportedStandardRef="NIST 800-53"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps>&lt;p&gt;&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Identify where critical decisions are made on the application. Key areas include:&amp;nbsp;&lt;/li&gt; 
+ &lt;ul&gt; 
+  &lt;li&gt;authentication&amp;nbsp;&lt;/li&gt; 
+  &lt;li&gt;input validation&amp;nbsp;&lt;/li&gt; 
+  &lt;li&gt;access to resources&amp;nbsp;&lt;/li&gt; 
+  &lt;li&gt;state bypasses&amp;nbsp;&lt;/li&gt; 
+ &lt;/ul&gt; 
+ &lt;li&gt;Ensure those decisions are made or validated on the server side, particularly where client-side controls are implemented.&amp;nbsp;&lt;/li&gt; 
+ &lt;li&gt;Verify that sensitive data passed to the client side is appropriate, and ensure no inappropriate data is stored or hard-coded into client-side components, for example&amp;nbsp;&lt;/li&gt; 
+ &lt;ul&gt; 
+  &lt;li&gt;Personally Identifiable Information.&amp;nbsp;&lt;/li&gt; 
+  &lt;li&gt;Financial data, in particular cardholder data (as defined by the &lt;span class="caps"&gt;PCI&lt;/span&gt; Council).&amp;nbsp;&lt;/li&gt; 
+  &lt;li&gt;Application secrets - such as symmetric encryption keys or passwords.&lt;/li&gt; 
+ &lt;/ul&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;&lt;/p&gt;</steps>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.424">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="CWE-79-ENCODE" name="Perform contextual HTML encoding of all user submitted data" issueId="" issueLink="" platform="" cost="1" risk="40" state="Recommended" owner="JamesRabe" library="CS-Default" source="RULES" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;All data received from the client-side should be considered tainted and a potential risk. If handled properly at the point of input, this untrusted tainted data should have been sanitized and encoded safely. The context when returning the data to the user is important, however, as this will affect what metacharacters have significance, and how they will be interpreted at the client-side. &lt;/p&gt;
+
+ For example, if data is inserted into the &lt;span class="caps"&gt;HTML&lt;/span&gt; body then &lt;span class="caps"&gt;HTML&lt;/span&gt; Entity encoding should be performed, but if the data is inserted into a JavaScript block, then JavaScript escaping should be performed. Similarly, while JavaScript code should not be executed in the browser when returned in an application/json response, it may then be rendered in an unsafe manner. 
+ - Apply contextual encoding to all tainted data when returned to the users (including secondary users if the application has multiple interfaces - e.g. an internal user viewing data entered by an external customer).
+ - This should be in addition to, and in conjunction with, sanitization and encoding applied at the time of data acquisition.</desc>
+          <implementations>
+            <implementation platform=".NET">
+              <desc>ClJlc3BvbnNlLldyaXRlKEh0dHBVdGlsaXR5Lkh0bWxFbmNvZGUoUmVxdWVzdC5Gb3JtWyJuYW1lIl0pKTs=</desc>
+            </implementation>
+          </implementations>
+          <references>
+            <reference name="OSA CM-02 Baseline Configuration" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/153-08_02_CM-02"/>
+            <reference name="OSA CM-06 Configuration Settings" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/157-08_02_CM-06"/>
+            <reference name="OSA SI-01 System And Information Integrity Policy And Procedures" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/39-08_02_SI-01"/>
+            <reference name="OSA SI-02 Flaw Remediation" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/40-08_02_SI-02"/>
+            <reference name="OSA SI-10 Information Accuracy, Completeness, Validity, And Authenticity" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/48-08_02_SI-10"/>
+            <reference name="OWASP Juice Shop: XSS" url="https://pwning.owasp-juice.shop/part2/xss.html"/>
+          </references>
+          <standards>
+            <standard ref="1.5.4" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="1.5.4" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="12.2.1" supportedStandardRef="ISO/IEC 27002:2013"/>
+            <standard ref="2.4.10.11" supportedStandardRef="iotsf-class-0"/>
+            <standard ref="2.4.10.11" supportedStandardRef="iotsf-class-1"/>
+            <standard ref="2.4.10.11" supportedStandardRef="iotsf-class-2"/>
+            <standard ref="5.3.1" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="5.3.1" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="5.3.1" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="5.3.3" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="5.3.3" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="5.3.3" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="5.3.5" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="5.3.5" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="5.3.5" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="5.3.6" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="5.3.6" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="5.3.6" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="A03:2021-Injection" supportedStandardRef="owasp-top-10-2021"/>
+            <standard ref="A7:2017-Cross-Site Scripting (XSS)" supportedStandardRef="owasp-top-10-2017"/>
+            <standard ref="CA-8" supportedStandardRef="NIST 800-53"/>
+            <standard ref="CM-2" supportedStandardRef="NIST 800-53"/>
+            <standard ref="CM-6" supportedStandardRef="NIST 800-53"/>
+            <standard ref="DE.AE-1" supportedStandardRef="nist-csf"/>
+            <standard ref="ID.GV-1" supportedStandardRef="nist-csf"/>
+            <standard ref="ID.GV-3" supportedStandardRef="nist-csf"/>
+            <standard ref="ID.RA-1" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.DS-7" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.IP-1" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.IP-12" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.IP-2" supportedStandardRef="nist-csf"/>
+            <standard ref="SI-1" supportedStandardRef="NIST 800-53"/>
+            <standard ref="SI-10" supportedStandardRef="NIST 800-53"/>
+            <standard ref="SI-14" supportedStandardRef="NIST 800-53"/>
+            <standard ref="SI-15" supportedStandardRef="NIST 800-53"/>
+            <standard ref="SI-2" supportedStandardRef="NIST 800-53"/>
+            <standard ref="cwe-top-25" supportedStandardRef="cwe-top-25-dangerous-weaknesses"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps>&lt;p&gt;&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Identify the areas of the application in which tainted data acquired from outside the application presented back (e.g. user input, uploaded files, third party content)&amp;nbsp;&lt;/li&gt; 
+ &lt;li&gt;Review the encoding and sanitization applied to the data before presentation.&amp;nbsp;&lt;/li&gt; 
+ &lt;li&gt;If possible, pass metacharacters and other unexpected content through the application to review the efficacy of the encoding.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;&lt;/p&gt;</steps>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.929">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="excessive-permissions" name="Request only the minimum required permissions" issueId="" issueLink="" platform="" cost="0" risk="45" state="Recommended" owner="JamesRabe" library="CS-Default" source="RULES" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;div&gt;
+  Security best practices dictate that the practice of least-privilege be followed, thereby reducing the attack surface and risk of compromise. By limiting the access an application has to the system, developers may reduce the impact a compromise may have.&amp;nbsp;
+&lt;/div&gt;
+&lt;div&gt;
+  Request only the minimum required permissions. For example, if there is no requirement to use the camera then the application should not request this permission.
+&lt;/div&gt;
+&lt;div&gt;
+  Review features and functionalities present in the application, in particular legacy features, to determine if they are relevant and required, and if not remove them along with associated OS permissions.
+&lt;/div&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards>
+            <standard ref="10.2.2" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="10.2.2" supportedStandardRef="owasp-asvs4-level-3"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps>&lt;div&gt;
+  Verify that the application only requests the necessary permissions to work correctly.
+&lt;/div&gt;</steps>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.929">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="CSD-CLIENT-SECRET" name="Review code, configuration, and online repositories for secrets and sensitive information systemically" issueId="" issueLink="" platform="" cost="0" risk="59" state="Recommended" owner="JamesRabe" library="CS-Default" source="RULES" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;Secret or sensitive information should not be exposed in source-code or client-side software.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Code and online repositories must not contain secrets or sensitive information.&lt;/li&gt;&lt;li&gt;Configuration files on the client- and server-side must not contain hard-coded credentials or other sensitive data.&lt;/li&gt;&lt;li&gt;Online repositories, services, and other associated restricted content must have appropriate access controls in place.&lt;/li&gt;&lt;li&gt;Where sensitive information must be stored on the server side, it should be in memory for transient data, or encrypted if persistent. &amp;nbsp;Depending on the use case, this encryption may be asymmetric or public key, or symmetric using a shared secret. Note however that reversible encryption on the client-side and in-memory storage are still susceptible to client-side attacks.&lt;/li&gt;&lt;/ul&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards>
+            <standard ref="10.1.2" supportedStandardRef="ISO/IEC 27002:2013"/>
+            <standard ref="2.10.4" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="2.10.4" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="AU-13" supportedStandardRef="NIST 800-53"/>
+            <standard ref="DE.CM-3" supportedStandardRef="nist-csf"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps>&lt;ol&gt;&lt;li&gt;Use automated tools to regularly search for keywords or regular expression patterns within the code, configuration and other files exposed on the client and server-side, and any remote repositories.&lt;/li&gt;&lt;li&gt;The scanning process must be triggered before the code is published (in particular for public/open source code) as once published it is likely to be archived (and any disclosed secrets would be exposed and/or have to be changed)&lt;/li&gt;&lt;li&gt;Review criteria and requirements for any temporary or persistent storage of sensitive or secret data on the client-side, and the protections in place.&lt;/li&gt;&lt;/ol&gt;</steps>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.425">
+              <output/>
+            </source>
+            <references>
+              <reference name="Microsoft Exchange 2016 Sensitive Information Patterns" url="https://technet.microsoft.com/en-us/library/jj150541(v=exchg.160).aspx"/>
+              <reference name="Prevents you from committing secrets and credentials into git repositories" url="https://github.com/awslabs/git-secrets"/>
+              <reference name="Seekret" url="https://github.com/apuigsech/seekret"/>
+            </references>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="use-analysis-static-code" name="Scan the code with static code analysis tools" issueId="" issueLink="" platform="" cost="0" risk="66" state="Recommended" owner="JamesRabe" library="CS-Default" source="RULES" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;div&gt;
+  Use periodically a static code analysis tool to analyze the code and detect potentially malicious code, such as time functions, unsafe file operations and networks connections. With the scanning of static code, we ensure the integrity of the application. 
+&lt;/div&gt;</desc>
+          <implementations/>
+          <references/>
+          <standards>
+            <standard ref="10.1.1" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="10.2.3" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="10.2.4" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="10.2.5" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="10.2.6" supportedStandardRef="owasp-asvs4-level-3"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps>&lt;div&gt;
+  Verify that a code analysis tool is in use and it is configured to detect potentially malicious code, such as time functions, unsafe file operations and network connections. 
+&lt;/div&gt;</steps>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.299">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="secure-attributes-of-cookies" name="Secure Cookies with their attributes" issueId="" issueLink="" platform="" cost="0" risk="40" state="Recommended" owner="JamesRabe" library="CS-Default" source="RULES" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;The session ID exchange mechanism based on cookies provides multiple security features in the form of cookie attributes that can be used to protect the exchange of the session ID:&lt;/p&gt;&lt;p&gt;&lt;br&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Secure and HttpOnly Attribute:&lt;/strong&gt;&amp;nbsp;a secure cookie is only sent to the server with an encrypted request over the HTTPS protocol. Even with Secure, sensitive information should never be stored in cookies, as they are inherently insecure and this flag doesn't offer robust protection. Starting with Chrome 52 and Firefox 52, insecure sites (http:) can't set cookies with the Secure directive.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;To mitigate cross-site scripting (XSS) attacks, HttpOnly cookies are inaccessible to JavaScript's Document.cookie API; they are only sent to the server. For example, cookies that persist server-side sessions don't need to be available to JavaScript, and so the HttpOnlyflag should be set.&lt;/p&gt;&lt;p&gt;Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly&lt;/p&gt;&lt;p&gt;&lt;br&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;SameSite Attribute: &amp;nbsp;&lt;/strong&gt;The SameSite attribute should be configured to limit exposure against cross-site request forgery attacks. There are two possibilities:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Strict:&lt;/strong&gt; the browser will only send cookies if the request originated from the website that set the cookie. If the request originated from a different URL than the URL of the current location, none of the cookies tagged with the Strict attribute will be included.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Lax:&lt;/strong&gt; if the attribute is set to Lax, same-site cookies are withheld on cross-site subrequests, such as calls to load images or frames, but will be sent when a user navigates to the URL from an external site, for example, by following a link.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;By default SameSite is not configured, we need to configure it with one of the above types, as shown below:&lt;/p&gt;&lt;p&gt;Set-Cookie: key=value; SameSite=Strict&lt;/p&gt;&lt;p&gt;&lt;br&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Domain and Path Attributes:&lt;/strong&gt; The session token value issued after users have successfully identified and authenticated themselves is of equivalent value to the secrets the user presents to login, and must be protected accordingly.&amp;nbsp;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;If the cookie domain attribute is too liberal, the cookie may be accessible to other hosts within the parent domain. This is a particular issue in multi-tenanted hosting, or where applications are delivered as subdomains of a third party parent domain.&lt;/li&gt;&lt;li&gt;If the cookie path attribute is not appropriately restricted, the session token may be accessible from other applications or content on the server.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;The domain and the path attributes for the session cookie should be restricted to the fully qualified hostname on which the application is running.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;For example:&lt;/p&gt;&lt;p&gt;Set-Cookie: session=token; Path=/theapp/; Domain=myapp.example.com; secure; HTTPOnly&lt;/p&gt;&lt;p&gt;&lt;br&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;__Host- prefix:&lt;/strong&gt; ensure that all Cookies with a name starting with __Host- are:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;set with the secure flag,&lt;/li&gt;&lt;li&gt;from a secure page (HTTPS),&lt;/li&gt;&lt;li&gt;does not have a domain specified (and therefore aren't sent to subdomains)&lt;/li&gt;&lt;li&gt;and the path must be "/".&lt;/li&gt;&lt;/ul&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="HttpOnly" url="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"/>
+            <reference name="OWASP XSS (Cross Site Scripting) Prevention Cheat Sheet" url="https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.md"/>
+            <reference name="Owasp Cheatsheet: Session Management" url="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html"/>
+            <reference name="[C3] OWASP Proactive Controls" url="https://www.owasp.org/index.php/OWASP_Proactive_Controls"/>
+            <reference name="__Host-Prefix" url="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie"/>
+          </references>
+          <standards>
+            <standard ref="3.2.3" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="3.2.3" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="3.2.3" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="3.4.1" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="3.4.1" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="3.4.1" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="3.4.2" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="3.4.2" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="3.4.2" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="3.4.3" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="3.4.3" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="3.4.3" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="3.4.4" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="3.4.4" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="3.4.4" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="3.4.5" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="3.4.5" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="3.4.5" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="7.1" supportedStandardRef="nist-800-63"/>
+            <standard ref="7.1.1" supportedStandardRef="nist-800-63"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps>&lt;ul&gt;&lt;li&gt;Using a browser, open the Web Developer tools.&lt;/li&gt;&lt;li&gt;Load the Network inspection tab.&lt;/li&gt;&lt;li&gt;Load the endpoints of the application which set cookies (send the Set-Cookie HTTP header).&lt;/li&gt;&lt;li&gt;Check that within the HTTP response, the Set-Cookie has:&lt;ul&gt;&lt;li&gt;the path and domain attributes set to the most restrictive path and domain respectively.&lt;/li&gt;&lt;li&gt;'HttpOnly' and 'secure' flag set and configured&lt;/li&gt;&lt;li&gt;'SameSite' attribute configured.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Check that all Cookies with a name starting with __Host- are:&lt;ul&gt;&lt;li&gt;set with the secure flag,&lt;/li&gt;&lt;li&gt;from a secure page (HTTPS),&lt;/li&gt;&lt;li&gt;does not have a domain specified (and therefore aren't sent to subdomains)&lt;/li&gt;&lt;li&gt;and the path is"/".&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</steps>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.929">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="CWE-693-NOSNIFF" name="Set the HTTP security header 'X-Content-Type-Options' from the server" issueId="" issueLink="" platform="" cost="0" risk="40" state="Recommended" owner="JamesRabe" library="CS-Default" source="RULES" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;A number of browser-based attacks rely on incorrectly stating MIME types on content in an attempt to bypass server and browser controls to render malicious content to the user.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Set the &lt;i&gt;X-Content-Type-Options: nosniff&lt;/i&gt;&amp;nbsp;header on any page that displays previously uploaded content to prevent some XSS and related attacks.&lt;/li&gt;&lt;/ul&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="OSA CM-02 Baseline Configuration" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/153-08_02_CM-02"/>
+            <reference name="OSA CM-06 Configuration Settings" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/157-08_02_CM-06"/>
+            <reference name="OWASP Secure Headers Project" url="https://www.owasp.org/index.php/OWASP_Secure_Headers_Project"/>
+          </references>
+          <standards>
+            <standard ref="14.4.4" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="14.4.4" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="14.4.4" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="CM-2" supportedStandardRef="NIST 800-53"/>
+            <standard ref="CM-6" supportedStandardRef="NIST 800-53"/>
+            <standard ref="DE.AE-1" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.DS-7" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.IP-1" supportedStandardRef="nist-csf"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps>&lt;div&gt;
+                            &lt;ol&gt;
+                            &lt;li&gt;Review the HTTP Server responses to ensure the&amp;nbsp;&lt;i&gt;&lt;i&gt;X-Content-Type-Options:
+                            nosniff&lt;/i&gt;&amp;nbsp;&lt;/i&gt;header is returned.&lt;/li&gt;
+                            &lt;li&gt;Using a browser:&amp;nbsp;&lt;/li&gt;
+                            &lt;li&gt;Open the Web Developer Console.&amp;nbsp;&lt;/li&gt;
+                            &lt;ul&gt;
+                            &lt;li&gt;Make requests to the different component's endpoints.&amp;nbsp;&lt;/li&gt;
+                            &lt;li&gt;Verify the header is always returned as part of these responses&lt;/li&gt;
+                            &lt;/ul&gt;
+                            &lt;li&gt;Using an intercepting proxy (e.g. OWASP Zap, BurpSuite)&lt;/li&gt;
+                            &lt;ul&gt;
+                            &lt;li&gt;Browse the site through the proxy&lt;/li&gt;
+                            &lt;li&gt;Review server responses and/or use automated scanning to analyze headers&lt;/li&gt;
+                            &lt;/ul&gt;
+                            &lt;/ol&gt;
+                            &lt;/div&gt;
+                        </steps>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.929">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="@cwe-693-clickjack" name="Set the HTTP security header 'X-Frame-Options header' from the server" issueId="" issueLink="" platform="" cost="0" risk="53" state="Recommended" owner="JamesRabe" library="CS-Default" source="RULES" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;Prevent the page from being framed by setting the X-Frame-Options header&lt;/p&gt;&lt;p&gt;&lt;br&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Set the X-Frame-Options header to the value: SAMEORIGIN or DENY. &amp;nbsp;This header is honored by the following browser versions:&amp;nbsp;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Chrome 4.1.249.1042&lt;/li&gt;&lt;li&gt;Firefox (Gecko) 3.6.9&lt;/li&gt;&lt;li&gt;Internet Explorer 8.0 9.0&lt;/li&gt;&lt;li&gt;Opera 10.50Safari 4.0&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Newer versions may also support the additional value: ALLOW-FROM which allows specifying URLs that are permitted to frame the page.&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="OSA CM-02 Baseline Configuration" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/153-08_02_CM-02"/>
+            <reference name="OSA CM-06 Configuration Settings" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/157-08_02_CM-06"/>
+            <reference name="OWASP Secure Headers Project" url="https://www.owasp.org/index.php/OWASP_Secure_Headers_Project"/>
+          </references>
+          <standards>
+            <standard ref="14.4.7" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="14.4.7" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="14.4.7" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="CM-2" supportedStandardRef="NIST 800-53"/>
+            <standard ref="CM-6" supportedStandardRef="NIST 800-53"/>
+            <standard ref="DE.AE-1" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.DS-7" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.IP-1" supportedStandardRef="nist-csf"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps>&lt;p&gt;&lt;br&gt;&amp;nbsp;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Review the HTTP Server responses to ensure the&lt;i&gt;&amp;nbsp;X-Frame-Options: DENY &lt;/i&gt;header is returned.&lt;/li&gt;&lt;li&gt;Using a browser:&lt;/li&gt;&lt;li&gt;Open the Web Developer Console.&lt;ul&gt;&lt;li&gt;Make requests to the component's endpoints.&lt;/li&gt;&lt;li&gt;Verify the following header is always returned as part of these responses&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Using an intercepting proxy (e.g. OWASP Zap, BurpSuite)&lt;ul&gt;&lt;li&gt;Browse the site through the proxy&lt;/li&gt;&lt;li&gt;Review server responses and/or use automated scanning to analyze headers&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;</steps>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.928">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="secure-communication-ra-and-csp" name="Use secure communication between CSP and RA" issueId="" issueLink="" platform="" cost="0" risk="53" state="Recommended" owner="JamesRabe" library="CS-Default" source="RULES" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;In situations where the verifier and CSP are separate entities, communications between RA (Registration Authority) and CSP (Credential Service Provider), should be authenticated with a mutually-authenticated secure channel, such as a client-authenticated TLS connection, using approved cryptographic algorithms.&lt;/p&gt;
+&lt;p&gt;NIST's digital identity model involves some entities:&lt;/p&gt;
+&lt;p&gt;- CSP (Credential Service Provider): A credential service provider is a trusted entity that issues security tokens or electronic credentials to subscribers. A CSP forms part of an authentication system, most typically identified as a separate entity in a Federated authentication system. A CSP may be an independent third party, or may issue credentials for its own use. Credential Service Provider is typically also the Identity Provider (IDP). An example of a CSP would be an online site whose primary purpose may be, for example, internet banking - but whose users may be subsequently authenticated to other sites, applications or services without further action on their part.&lt;/p&gt;
+&lt;p&gt;- Registration Authority (RA): A trusted entity that establishes and vouches for the identity of a subscriber to a CSP. The RA may be an integral part of a CSP, or it may be independent of a CSP, but it has a relationship to the CSP.&lt;/p&gt;
+&lt;p&gt;- Verifier: This refers to an entity that verifies the claimant's identity by verifying the claimant's possession and control of one or two authenticators, using an authentication protocol.&lt;/p&gt;
+&lt;p&gt;- RP (Relying party): This refers to an entity that relies on the subscriber's authenticator(s) and credentials or a verifier's assertion of a claimant's identity, typically to process a transaction or grant access to information or a system.&lt;/p&gt;
+&lt;p&gt;- Applicant: This refers to a subject undergoing the processes of enrollment and identity proofing.&lt;/p&gt;
+&lt;p&gt;- Claimant: This refers to a subject whose identity is to be verified using one or more authentication protocols.&lt;/p&gt;
+&lt;p&gt;- Subscriber: This refers to a party who has received a credential or an authenticator from a CSP.&amp;nbsp;&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="NIST 800-63-1" url="https://csrc.nist.rip/groups/SMA/forum/documents/feb2012_nist-sp-800-63-1_newton-perlner.pdf"/>
+            <reference name="NIST 800-63C" url="https://pages.nist.gov/800-63-3/sp800-63c.html"/>
+          </references>
+          <standards>
+            <standard ref="2.2.5" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="5.2.6" supportedStandardRef="nist-800-63"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps>&lt;p&gt;Verify the CSP and RA communicate securely with a secure channel, for example with TLS.&lt;/p&gt;</steps>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.425">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="DATA-VAL" name="Validate all data received" issueId="" issueLink="" platform="" cost="1" risk="40" state="Recommended" owner="JamesRabe" library="CS-Default" source="RULES" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;All data received should be considered tainted and a potential risk, regardless of the source or transport method. For example, while hidden form fields, cookies or other headers may be obfuscated from a user, along with parameters passed in ViewStates or other encapsulated forms. These can be modified by the user on the client-side in memory, or in transit on the network. Similarly, data passed from binary or compiled components can be modified in situ or in transit. &lt;i&gt;&lt;/i&gt; &lt;i&gt;Furthermore, encryption only secures the data in transit between the two ends of the encrypted tunnel (one of which is typically controlled by the client); data passing through the link may still be malicious.&lt;/i&gt; &lt;/p&gt; As such, all data from the client side must be subjected to strict validation, sanitization, and encoding against expected syntactic and semantic criteria. 
+&lt;div&gt; 
+ &lt;ul&gt; 
+  &lt;li&gt;Define a specification of the data that is expected at each input; both the syntax (e.g. alphanumeric only) and semantics (e.g. a word of between 1 and 25 characters, or a specific list). As an example of business rule logic, &amp;quot;boat&amp;quot; may be syntactically valid because it only contains alphanumeric characters, but it is not valid if the input is only expected to contain colors such as &amp;quot;red&amp;quot; or &amp;quot;blue.&amp;quot;&amp;nbsp;&lt;/li&gt; 
+  &lt;li&gt;Implement a 'known good' or white-list approach, where only inputs that meet the strict criteria for each input are accepted, and reject, transform, or encapsulate any non-compliant data.&amp;nbsp;&lt;/li&gt; 
+  &lt;li&gt;While useful for identifying malicious content, do not rely on looking for specific malformed or attack payloads (blacklists). It is almost impossible to maintain a comprehensive and accurate blacklist due to the complexity and evolving nature of attacks, opportunities to obfuscate payloads, and changes to the code's execution environment. As noted, blacklists can be useful for detecting and logging potential attacks, or determining which inputs are so malformed that they should be rejected outright.&amp;nbsp;&lt;/li&gt; 
+  &lt;li&gt;Validate all data received from the client, including values such as &lt;span class="caps"&gt;HTTP&lt;/span&gt; headers and cookie values if these are used as input on the server side, X- headers, and other platform specific data objects passed between the client and server.&lt;/li&gt; 
+ &lt;/ul&gt; 
+&lt;/div&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="OSA SC-13 Use Of Cryptography" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/73-08_02_SC-13"/>
+            <reference name="OSA SI-01 System And Information Integrity Policy And Procedures" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/39-08_02_SI-01"/>
+            <reference name="OSA SI-03 Malicious Code Protection" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/41-08_02_SI-03"/>
+            <reference name="OSA SI-10 Information Accuracy, Completeness, Validity, And Authenticity" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/48-08_02_SI-10"/>
+            <reference name="OSA SI-11 Error Handling" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/49-08_02_SI-11"/>
+            <reference name="OWASP Juice Shop: Injection" url="https://pwning.owasp-juice.shop/part2/injection.html"/>
+            <reference name="OWASP Juice Shop: Insecure Deserialization" url="https://pwning.owasp-juice.shop/part2/insecure-deserialization.html"/>
+          </references>
+          <standards>
+            <standard ref="1" supportedStandardRef="csa-api-security-guidelines"/>
+            <standard ref="1.5.3" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="1.5.3" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="11.1.5" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="11.1.5" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="11.1.5" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="12" supportedStandardRef="csa-api-security-guidelines"/>
+            <standard ref="12.2.1" supportedStandardRef="ISO/IEC 27002:2013"/>
+            <standard ref="12.3.5" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="12.3.5" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="12.3.5" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="12.6.1" supportedStandardRef="ISO/IEC 27002:2013"/>
+            <standard ref="14" supportedStandardRef="csa-api-security-guidelines"/>
+            <standard ref="15" supportedStandardRef="csa-api-security-guidelines"/>
+            <standard ref="16" supportedStandardRef="csa-api-security-guidelines"/>
+            <standard ref="17" supportedStandardRef="csa-api-security-guidelines"/>
+            <standard ref="18" supportedStandardRef="csa-api-security-guidelines"/>
+            <standard ref="19" supportedStandardRef="csa-api-security-guidelines"/>
+            <standard ref="2.4.10.10" supportedStandardRef="iotsf-class-0"/>
+            <standard ref="2.4.10.10" supportedStandardRef="iotsf-class-1"/>
+            <standard ref="2.4.10.10" supportedStandardRef="iotsf-class-2"/>
+            <standard ref="2.4.10.12" supportedStandardRef="iotsf-class-0"/>
+            <standard ref="2.4.10.12" supportedStandardRef="iotsf-class-1"/>
+            <standard ref="2.4.10.12" supportedStandardRef="iotsf-class-2"/>
+            <standard ref="2.4.11.9" supportedStandardRef="iotsf-class-0"/>
+            <standard ref="2.4.11.9" supportedStandardRef="iotsf-class-1"/>
+            <standard ref="2.4.11.9" supportedStandardRef="iotsf-class-2"/>
+            <standard ref="24" supportedStandardRef="csa-api-security-guidelines"/>
+            <standard ref="31" supportedStandardRef="csa-api-security-guidelines"/>
+            <standard ref="5.1.3" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="5.1.3" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="5.1.3" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="5.1.4" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="5.1.4" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="5.1.4" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="5.2.2" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="5.2.2" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="5.2.2" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="5.2.3" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="5.2.3" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="5.2.3" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="5.2.6" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="5.2.6" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="5.2.6" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="5.2.7" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="5.2.7" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="5.2.7" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="5.3.10" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="5.3.10" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="5.3.10" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="5.3.8" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="5.3.8" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="5.3.8" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="6" supportedStandardRef="csa-api-security-guidelines"/>
+            <standard ref="8" supportedStandardRef="csa-api-security-guidelines"/>
+            <standard ref="A03:2021-Injection" supportedStandardRef="owasp-top-10-2021"/>
+            <standard ref="A08:2021-Software and Data Integrity Failures" supportedStandardRef="owasp-top-10-2021"/>
+            <standard ref="A10:2021-Server-Side Request Forgery (SSRF)" supportedStandardRef="owasp-top-10-2021"/>
+            <standard ref="A1:2017-Injection" supportedStandardRef="owasp-top-10-2017"/>
+            <standard ref="A8:2017-Insecure Deserialization" supportedStandardRef="owasp-top-10-2017"/>
+            <standard ref="API8:2019-Injection" supportedStandardRef="owasp-api-security-top-10"/>
+            <standard ref="CA-8" supportedStandardRef="NIST 800-53"/>
+            <standard ref="DE.CM-4" supportedStandardRef="nist-csf"/>
+            <standard ref="DE.DP-3" supportedStandardRef="nist-csf"/>
+            <standard ref="ID.GV-1" supportedStandardRef="nist-csf"/>
+            <standard ref="ID.GV-3" supportedStandardRef="nist-csf"/>
+            <standard ref="ID.RA-1" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.DS-5" supportedStandardRef="nist-csf"/>
+            <standard ref="SC-13" supportedStandardRef="fedramp-high-baseline"/>
+            <standard ref="SC-13" supportedStandardRef="fedramp-low-baseline"/>
+            <standard ref="SC-13" supportedStandardRef="fedramp-moderate-baseline"/>
+            <standard ref="SC-13" supportedStandardRef="NIST 800-53"/>
+            <standard ref="SI-1" supportedStandardRef="NIST 800-53"/>
+            <standard ref="SI-10" supportedStandardRef="NIST 800-53"/>
+            <standard ref="SI-11" supportedStandardRef="NIST 800-53"/>
+            <standard ref="SI-15" supportedStandardRef="NIST 800-53"/>
+            <standard ref="SI-3" supportedStandardRef="NIST 800-53"/>
+            <standard ref="cwe-top-25" supportedStandardRef="cwe-top-25-dangerous-weaknesses"/>
+          </standards>
+          <customFields/>
+          <test expiryDate="" expiryPeriod="0">
+            <steps>&lt;p&gt;Identify data input points for the application, for example:&amp;nbsp;&lt;/p&gt; 
+&lt;p&gt;&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Forms with user input (including hidden fields)&amp;nbsp;&lt;/li&gt; 
+ &lt;li&gt;&lt;span class="caps"&gt;API&lt;/span&gt; calls&amp;nbsp;&lt;/li&gt; 
+ &lt;li&gt;&lt;span class="caps"&gt;HTTP&lt;/span&gt; Headers&amp;nbsp;&lt;/li&gt; 
+ &lt;li&gt;Application states such as &lt;span class="caps"&gt;ASP&lt;/span&gt; Viewstates&amp;nbsp;&lt;/li&gt; 
+ &lt;li&gt;Serialized Java objects&lt;/li&gt; 
+ &lt;li&gt;Any data structure received from the client-side&amp;nbsp;&lt;/li&gt; 
+ &lt;li&gt;For every input, define accepted input (both syntactic and semantic criteria)&lt;/li&gt; 
+ &lt;li&gt;Where possible, define a white-list of accepted input or characters&amp;nbsp;&lt;/li&gt; 
+ &lt;li&gt;For each of the inputs, ensure that the data is validated against the defined whitelists (for example with a regular expression) before being processed.&amp;nbsp;&lt;/li&gt; 
+&lt;/ul&gt;To test data validation:&amp;nbsp; 
+&lt;p&gt;&lt;/p&gt; 
+&lt;p&gt;&lt;/p&gt; 
+&lt;ul&gt; 
+ &lt;li&gt;Review the acceptable input criteria, and build test cases that deviate from it (invalid characters, lengths, ranges etc.).&amp;nbsp;&lt;/li&gt; 
+ &lt;li&gt;Pass invalid input to the application and review error trapping and handling.&amp;nbsp;&lt;/li&gt; 
+ &lt;li&gt;Where unexpected exceptions occur, the application may be vulnerable to attack.&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;p&gt;&lt;/p&gt; A number of tools can be used to aid in testing: 
+&lt;div&gt; 
+ &lt;ul&gt; 
+  &lt;li&gt;Directly from your browser with the Developer Tools.&amp;nbsp;&lt;/li&gt; 
+  &lt;li&gt;Using a browser extension which allows you to modify the request and responses on the fly (i.e. Tamper Data).&amp;nbsp;&lt;/li&gt; 
+  &lt;li&gt;Using a proxy which allows you to modify the request and response on the fly (i.e. &lt;span class="caps"&gt;OWASP&lt;/span&gt; &lt;span class="caps"&gt;ZAP&lt;/span&gt;, Burp, Fiddler, etc.).&lt;/li&gt; 
+ &lt;/ul&gt; 
+&lt;/div&gt;</steps>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.661">
+              <output/>
+            </source>
+            <references/>
+            <customFields/>
+          </test>
+        </countermeasure>
+        <countermeasure ref="CWE-295-CLIENT" name="Validate the certificate presented by the server" issueId="" issueLink="" platform="" cost="0" risk="53" state="Recommended" owner="JamesRabe" library="CS-Default" source="RULES" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;Certificates presented by the server must be valid, provable, and cryptographically secure in order to derive the benefits of TLS encrypted communications.&amp;nbsp; Invalid certificates expose the application and its users to spoofing attacks such as Man In The Middle (MITM) where data may be intercepted or redirected to a malicious site, and undermine confidence in the site.&lt;/p&gt;&lt;p&gt;Validate the certificate presented by the server is signed by a trusted Certificate Authority.&lt;/p&gt;&lt;p&gt;Ensure the certificate chain of trust is legitimate and secure.&lt;/p&gt;&lt;p&gt;Verify cryptographically secure ciphers are in use throughout the chain, in particular strong hashing algorithms for certificate signatures.&amp;nbsp;&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="OSA SC-11 Trusted Path" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/71-08_02_SC-11"/>
+            <reference name="OSA SC-17 Public Key Infrastructure Certificates" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/77-08_02_SC-17"/>
+          </references>
+          <standards>
+            <standard ref="1.9.2" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="1.9.2" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="13.2.1" supportedStandardRef="ISO/IEC 27002:2013"/>
+            <standard ref="164.312(e)(1)(B)" supportedStandardRef="hipaa-addressable"/>
+            <standard ref="9.2.1" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="9.2.1" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="PR.DS-2" supportedStandardRef="nist-csf"/>
+            <standard ref="SC-11" supportedStandardRef="NIST 800-53"/>
+            <standard ref="SC-17" supportedStandardRef="fedramp-high-baseline"/>
+            <standard ref="SC-17" supportedStandardRef="fedramp-moderate-baseline"/>
+            <standard ref="SC-17" supportedStandardRef="NIST 800-53"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps>&lt;ol&gt;&lt;li&gt;Verify the client is conducting appropriate checks and receives a positive response regarding the validity and quality of the site certificate.&lt;/li&gt;&lt;li&gt;Use TLS analysis tools to check and rate the server security, for example:&lt;ol&gt;&lt;li&gt;SSL Labs SSL Server Test:&amp;nbsp;https://www.ssllabs.com/ssltest/&lt;/li&gt;&lt;li&gt;sslscan tool: https://github.com/rbsec/sslscan&lt;/li&gt;&lt;li&gt;testssh.sh tool: https://github.com/drwetter/testssl.sh&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;li&gt;Remediate all security issues and warnings relating to the server certificate, and those in the trust chain.&lt;/li&gt;&lt;/ol&gt;</steps>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.425">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="CWE-327" name="Validate the TLS implementation in use" issueId="" issueLink="" platform="" cost="0" risk="53" state="Recommended" owner="JamesRabe" library="CS-Default" source="RULES" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;There are a number of established open- and closed- source TLS implementations in use, which have undergone extensive review and testing by the developers, as well as third-parties in the development, security, and cryptography space. Typically, these widely used implementations have a lower risk of exploitation compared with privately developed - or less known - implementations (although vulnerabilities such as Heartbleed highlight this is not universally true) due to this additional scrutiny scrutiny.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Identify the TLS and other cryptographic libraries, implementations, and technologies in use.&lt;/li&gt;&lt;li&gt;Verify the veracity of the implementations, and review third party validations together with security advisories or best-practices relating to them.&lt;/li&gt;&lt;li&gt;Some well-known TLS libraries are NSS from Mozilla, and OpenSSL.&lt;/li&gt;&lt;li&gt;Where an unknown or unproven implementation is in use, consider use of an established option.&lt;/li&gt;&lt;/ul&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="Mozilla SSL Config" url="https://ssl-config.mozilla.org/"/>
+            <reference name="OSA SC-08 Transmission Integrity" url="https://www.opensecurityarchitecture.org/cms/library/08_02_control-catalogue/68-08_02_SC-08"/>
+            <reference name="Server Side TLS Configuration" url="https://wiki.mozilla.org/Security/Server_Side_TLS"/>
+          </references>
+          <standards>
+            <standard ref="13.2.1" supportedStandardRef="ISO/IEC 27002:2013"/>
+            <standard ref="164.312(e)(1)(B)" supportedStandardRef="hipaa-addressable"/>
+            <standard ref="9.1.2" supportedStandardRef="owasp-asvs4-level-1"/>
+            <standard ref="9.1.2" supportedStandardRef="owasp-asvs4-level-2"/>
+            <standard ref="9.1.2" supportedStandardRef="owasp-asvs4-level-3"/>
+            <standard ref="PR.DS-2" supportedStandardRef="nist-csf"/>
+            <standard ref="PR.DS-5" supportedStandardRef="nist-csf"/>
+            <standard ref="SC-8" supportedStandardRef="fedramp-high-baseline"/>
+            <standard ref="SC-8" supportedStandardRef="fedramp-moderate-baseline"/>
+            <standard ref="SC-8" supportedStandardRef="NIST 800-53"/>
+          </standards>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps>&lt;ol&gt;&lt;li&gt;Confirm the TLS layer in use is a secure, stable, release of a publicly published implementation that has been subject to expert analysis and review.&lt;ul&gt;&lt;li&gt;If not, assurance of the security of the implementation should be sought, or the risk quantified.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Verify that a client connecting to the server will only be able to negotiate cryptographically strong, secure ciphers.&lt;/li&gt;&lt;li&gt;Confirm that a client can not downgrade to a weaker cipher after initial negotiation.&lt;/li&gt;&lt;li&gt;Use TLS analysis tools to check and rate the server security, for example:&lt;ol&gt;&lt;li&gt;SSL Labs SSL Server Test:&amp;nbsp;https://www.ssllabs.com/ssltest/&lt;/li&gt;&lt;li&gt;sslscan tool: https://github.com/rbsec/sslscan&lt;/li&gt;&lt;li&gt;testssh.sh tool: https://github.com/drwetter/testssl.sh&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;li&gt;Remediate all security issues and warnings relating to the TLS/SSL ciphers, protocols, and security mechanisms.&lt;/li&gt;&lt;/ol&gt;</steps>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-03-29T20:18:46.425">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="GENERAL" name="General" desc="" library="CS-Default">
+          <threats>
+            <threat ref="CAPEC-63" name="An adversary embeds malicious scripts in content that will be served to web browsers" state="Expose" source="RULES" edited="false" owner="JamesRabe" library="CS-Default" editable="true">
+              <desc>&lt;p&gt;An adversary embeds malicious scripts in content that will be served to web browsers. The goal of the attack is for the target software, the client-side browser, to execute the script with the users' privilege level. An attack of this type exploits a programs' vulnerabilities that are brought on by allowing remote hosts to execute code and scripts. Web browsers, for example, have some simple security controls in place, but if a remote attacker is allowed to execute scripts (through injecting them in to user-generated content like bulletin boards) then these controls may be bypassed. Further, these attacks are very difficult for an end user to detect.&lt;/p&gt;</desc>
+              <riskRating confidentiality="50" integrity="50" availability="1" easeOfExploitation="25"/>
+              <references/>
+              <weaknesses>
+                <weakness ref="CWE-20">
+                  <countermeasures>
+                    <countermeasure ref="DATA-VAL" mitigation="100"/>
+                  </countermeasures>
+                </weakness>
+              </weaknesses>
+              <countermeasures>
+                <countermeasure ref="DATA-VAL" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+            <threat ref="sec-vuln-dev-process" name="Application contains security vulnerabilities not identified during the development process" state="Expose" source="RULES" edited="false" owner="JamesRabe" library="CS-Default" editable="true">
+              <desc>Application security should be embedded into a project's development environment, allowing developers to monitor their code regularly in order to avoid security vulnerabilities when the application is deployed in the production environment.</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references>
+                <reference name="NIST Security Considerations in the System Development Life Cycle" url="https://csrc.nist.gov/publications/detail/sp/800-64/rev-2/archive/2008-10-16"/>
+                <reference name="Risk-Based and Functional Security Testing" url="https://www.us-cert.gov/bsi/articles/best-practices/security-testing/risk-based-and-functional-security-testing"/>
+              </references>
+              <weaknesses>
+                <weakness ref="lack-automated-vuln-identification">
+                  <countermeasures>
+                    <countermeasure ref="use-analysis-static-code" mitigation="100"/>
+                  </countermeasures>
+                </weakness>
+              </weaknesses>
+              <countermeasures>
+                <countermeasure ref="use-analysis-static-code" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+            <threat ref="CWE-937-WEB" name="Attackers gain unauthorised access to data by compromising third party web resources" state="Expose" source="RULES" edited="false" owner="JamesRabe" library="CS-Default" editable="true">
+              <desc>Web applications typically make extensive use of 3rd party web resources such as
+                                JavaScript and CSS files.&amp;nbsp; Should attackers gain access to the source code
+                                repositories, or even Content Delivery Networks that host these libraries, then they
+                                could gain access to applications that use this content.
+                                &lt;div&gt;
+                                &lt;/div&gt;
+                            </desc>
+              <riskRating confidentiality="75" integrity="75" availability="100" easeOfExploitation="25"/>
+              <references/>
+              <weaknesses>
+                <weakness ref="CWE-830">
+                  <countermeasures>
+                    <countermeasure ref="ASSETS-HOSTED-BY-APP" mitigation="100"/>
+                  </countermeasures>
+                </weakness>
+              </weaknesses>
+              <countermeasures>
+                <countermeasure ref="ASSETS-HOSTED-BY-APP" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+            <threat ref="CSD-CLIENT-SECRET" name="Attackers gain unauthorised access to data or services by accessing a client side secret" state="Expose" source="RULES" edited="false" owner="JamesRabe" library="CS-Default" editable="true">
+              <desc>Secrets stored in any client side components, such as a mobile application, thick
+                                client application or in JavaScript used by a browser, can be accessed by
+                                users/attackers who have access to this client.
+                                &lt;div&gt;
+                                &lt;br /&gt;
+                                &lt;/div&gt;
+                                &lt;div&gt;
+                                Attackers could then gain access to the data or services that are protected by this
+                                secret, if no other credentials are required.
+                                &lt;/div&gt;
+                            </desc>
+              <riskRating confidentiality="100" integrity="50" availability="50" easeOfExploitation="75"/>
+              <references/>
+              <weaknesses>
+                <weakness ref="CWE-312">
+                  <countermeasures>
+                    <countermeasure ref="CSD-CLIENT-SECRET" mitigation="50"/>
+                  </countermeasures>
+                </weakness>
+                <weakness ref="CWE-798, CWE-603">
+                  <countermeasures>
+                    <countermeasure ref="CS-CLIENT-SECRET" mitigation="50"/>
+                  </countermeasures>
+                </weakness>
+              </weaknesses>
+              <countermeasures>
+                <countermeasure ref="CS-CLIENT-SECRET" mitigation="50"/>
+                <countermeasure ref="CSD-CLIENT-SECRET" mitigation="50"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+            <threat ref="DEP-CLIENT-TECH" name="Attackers gain unauthorised access to the application by the use of deprecated client-side technologies" state="Expose" source="RULES" edited="false" owner="JamesRabe" library="CS-Default" editable="true">
+              <desc>&lt;div&gt;
+  As programming languages evolve, functions occasionally become obsolete due to:
+&lt;/div&gt;
+&lt;ul&gt;
+ &lt;li&gt;Advances in the language.&lt;/li&gt;
+ &lt;li&gt;Improved understanding of how operations should be performed effectively and securely.&lt;/li&gt;
+ &lt;li&gt;Changes in the conventions that govern certain operations. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br /&gt;Functions that are removed are usually replaced by newer counterparts that perform the same task in some different and hopefully improved way.
+&lt;br /&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="50" easeOfExploitation="50"/>
+              <references/>
+              <weaknesses>
+                <weakness ref="CWE-477">
+                  <countermeasures>
+                    <countermeasure ref="INS-CLIENT" mitigation="100"/>
+                  </countermeasures>
+                </weakness>
+              </weaknesses>
+              <countermeasures>
+                <countermeasure ref="INS-CLIENT" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+            <threat ref="unattended-authenticated-sessions-could-be-accessed-by-nonapproved-users" name="Unattended authenticated sessions could be accessed by nonapproved users" state="Expose" source="MANUAL" edited="false" owner="JamesRabe" library="" editable="true">
+              <desc/>
+              <riskRating confidentiality="100" integrity="100" availability="50" easeOfExploitation="25"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="decrease-session-timeout-thresholds" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+        <usecase ref="my-domain" name="My Domain" desc="" library="">
+          <threats>
+            <threat ref="instance-names-and-integrations-in-the-url-could-be-used-to-further-attacks-and-map-attack-surface" name="Instance names and integrations in the URL could be used to further attacks and map attack surface" state="Expose" source="MANUAL" edited="false" owner="JamesRabe" library="" editable="true">
+              <desc/>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="100"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="implement-my-domain" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+        <usecase ref="READ OR POST DATA" name="Read or Post data" desc="" library="CS-Default">
+          <threats>
+            <threat ref="CAPEC-63" name="An adversary embeds malicious scripts in content that will be served to web browsers" state="Expose" source="RULES" edited="false" owner="JamesRabe" library="CS-Default" editable="true">
+              <desc>&lt;p&gt;An adversary embeds malicious scripts in content that will be served to web browsers. The goal of the attack is for the target software, the client-side browser, to execute the script with the users' privilege level. An attack of this type exploits a programs' vulnerabilities that are brought on by allowing remote hosts to execute code and scripts. Web browsers, for example, have some simple security controls in place, but if a remote attacker is allowed to execute scripts (through injecting them in to user-generated content like bulletin boards) then these controls may be bypassed. Further, these attacks are very difficult for an end user to detect.&lt;/p&gt;</desc>
+              <riskRating confidentiality="50" integrity="50" availability="1" easeOfExploitation="25"/>
+              <references/>
+              <weaknesses>
+                <weakness ref="CWE-693-NOSNIFF">
+                  <countermeasures>
+                    <countermeasure ref="CWE-693-NOSNIFF" mitigation="25"/>
+                  </countermeasures>
+                </weakness>
+                <weakness ref="CWE-79">
+                  <countermeasures>
+                    <countermeasure ref="CWE-79-ENCODE" mitigation="25"/>
+                  </countermeasures>
+                </weakness>
+                <weakness ref="CWE-84-HTTP-ONLY">
+                  <countermeasures>
+                    <countermeasure ref="secure-attributes-of-cookies" mitigation="25"/>
+                  </countermeasures>
+                </weakness>
+                <weakness ref="WEB-CSP">
+                  <countermeasures>
+                    <countermeasure ref="WEB-CSP" mitigation="25"/>
+                  </countermeasures>
+                </weakness>
+              </weaknesses>
+              <countermeasures>
+                <countermeasure ref="CWE-693-NOSNIFF" mitigation="25"/>
+                <countermeasure ref="CWE-79-ENCODE" mitigation="25"/>
+                <countermeasure ref="WEB-CSP" mitigation="25"/>
+                <countermeasure ref="secure-attributes-of-cookies" mitigation="25"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+            <threat ref="NTW-MITM" name="Attackers could gain access to sensitive data through a man in the middle attack" state="Expose" source="RULES" edited="false" owner="JamesRabe" library="CS-Default" editable="true">
+              <desc>&lt;p&gt;This type of attack targets the communication between two components (typically client and server). The attacker places himself in the communication channel between the two components. Whenever one component attempts to communicate with the other (data flow, authentication challenges, etc.), the data first goes to the attacker, who has the opportunity to observe or alter it, and it is then passed to the other component as if it were never intercepted. This interposition is transparent leaving the two compromised components unaware of the potential corruption or leakage of their communications. The potential for Man-in-the-Middle attacks yields an implicit lack of trust in communication or identity between two components.&lt;/p&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="50"/>
+              <references/>
+              <weaknesses>
+                <weakness ref="CWE-311">
+                  <countermeasures>
+                    <countermeasure ref="CWE-295-CLIENT" mitigation="25"/>
+                    <countermeasure ref="CWE-319-TRANSPORT" mitigation="25"/>
+                    <countermeasure ref="secure-communication-ra-and-csp" mitigation="25"/>
+                  </countermeasures>
+                </weakness>
+                <weakness ref="CWE-327">
+                  <countermeasures>
+                    <countermeasure ref="CWE-327" mitigation="25"/>
+                  </countermeasures>
+                </weakness>
+              </weaknesses>
+              <countermeasures>
+                <countermeasure ref="CWE-295-CLIENT" mitigation="25"/>
+                <countermeasure ref="CWE-319-TRANSPORT" mitigation="25"/>
+                <countermeasure ref="CWE-327" mitigation="25"/>
+                <countermeasure ref="secure-communication-ra-and-csp" mitigation="25"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+            <threat ref="CAPEC-122" name="Privilege Abuse" state="Expose" source="RULES" edited="false" owner="JamesRabe" library="CS-Default" editable="true">
+              <desc>&lt;p&gt;An adversary is able to exploit features of the target that should be reserved for privileged users or administrators but are exposed to use by lower or non-privileged accounts. Access to sensitive information and functionality must be controlled to ensure that only authorized users are able to access these resources. If access control mechanisms are absent or misconfigured, a user may be able to access resources that are intended only for higher level users. An adversary may be able to exploit this to utilize a less trusted account to gain information and perform activities reserved for more trusted accounts.&amp;nbsp;&lt;/p&gt; 
+&lt;p&gt;This attack differs from privilege escalation and other privilege stealing attacks in that the adversary never actually escalates their privileges but instead is able to use a lesser degree of privilege to access resources that should be (but are not) reserved for higher privilege accounts. Likewise, the adversary does not exploit trust or subvert systems - all control functionality is working as configured but the configuration does not adequately protect sensitive resources at an appropriate level.&lt;/p&gt;</desc>
+              <riskRating confidentiality="100" integrity="100" availability="100" easeOfExploitation="25"/>
+              <references/>
+              <weaknesses>
+                <weakness ref="CWE-250">
+                  <countermeasures>
+                    <countermeasure ref="excessive-permissions" mitigation="100"/>
+                  </countermeasures>
+                </weakness>
+              </weaknesses>
+              <countermeasures>
+                <countermeasure ref="excessive-permissions" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+        <usecase ref="TRANSACTION AUTHENTICATION" name="Transaction Authentication" desc="" library="CS-Default">
+          <threats>
+            <threat ref="CAPEC-103" name="Attackers cause users to peform arbitrary clicks on the site through ClickJacking attacks" state="Expose" source="RULES" edited="false" owner="JamesRabe" library="CS-Default" editable="true">
+              <desc>&lt;p&gt;In a clickjacking attack the victim is tricked into unknowingly initiating some action in one system while interacting with the UI from a seemingly different system.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;While being logged in to some target system, the victim visits the attackers' malicious site which displays a UI that the victim wishes to interact with. In reality, the clickjacked page has a transparent layer above the visible UI with action controls that the attacker wishes the victim to execute. The victim clicks on buttons or other UI elements they see on the page which actually triggers actions in the transparent overlaying layer.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Depending on what that action is, the attacker may have just tricked the victim into executing some potentially privileged (and most certainly undesired) functionality in the target system to which the victim is authenticated.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;The basic problem here is that there is a dichotomy between what the victim thinks he's clicking versus what he or she is actually clicking on.&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;/p&gt;</desc>
+              <riskRating confidentiality="75" integrity="75" availability="100" easeOfExploitation="50"/>
+              <references/>
+              <weaknesses>
+                <weakness ref="CWE-693-CLICKJACK">
+                  <countermeasures>
+                    <countermeasure ref="@cwe-693-clickjack" mitigation="100"/>
+                  </countermeasures>
+                </weakness>
+              </weaknesses>
+              <countermeasures>
+                <countermeasure ref="@cwe-693-clickjack" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </component>
+    <component uuid="48f81892-803e-4a24-b81b-9c9c67a8cf63" diagramComponentId="6a9f8648-3952-49e5-910e-4f6a4293b306" ref="e4e9b9a8-11e7-4209-89b7-2de31cf9ff1c" name="Third Party Integrations" desc="" library="CS-Default" parentComponentRef="c3f4b806-4e1d-4aa6-87c9-988d01a59ea5" componentDefinitionRef="empty-component">
+      <tags/>
+      <questions/>
+      <trustZones>
+        <trustZone ref="public-cloud"/>
+      </trustZones>
+      <assets/>
+      <settings/>
+      <weaknesses/>
+      <countermeasures/>
+      <usecases/>
+    </component>
+    <component uuid="b26ecfb3-c95f-484b-a5e3-c722973aa9fc" diagramComponentId="eeb71ff9-a64d-40c9-88b7-d59678c5cf7b" ref="e41cddb6-6584-401c-84e2-592b0ed5f2cc" name="Authorization Functions" desc="" library="CS-Default" parentComponentRef="c3f4b806-4e1d-4aa6-87c9-988d01a59ea5" componentDefinitionRef="empty-component">
+      <tags/>
+      <questions/>
+      <trustZones>
+        <trustZone ref="public-cloud"/>
+      </trustZones>
+      <assets/>
+      <settings/>
+      <weaknesses/>
+      <countermeasures>
+        <countermeasure ref="enforce-fine-grained-access-control-using-profiles-and-permission-sets" name="Enforce Fine-Grained Access Control Using Profiles and Permission Sets" issueId="" issueLink="" platform="" cost="0" risk="45" state="Recommended" owner="JamesRabe" library="" source="MANUAL" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;A permission set is a collection of settings and permissions that give users access to various tools and functions. Permission sets extend users’ functional access without changing their profiles.&lt;/p&gt;
+&lt;p&gt;Create permission sets to grant access among logical groupings of users, regardless of their primary job function. For example, let’s say you have several users who must delete and transfer leads. You can create a permission set based on the tasks that these users must perform and include the permission set within permission set groups based on job functions. While users can only have one profile, they can have multiple permission sets.&amp;nbsp;&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="Enforcing Permission Sets" url="https://developer.salesforce.com/docs/atlas.en-us.securityImplGuide.meta/securityImplGuide/perm_sets_overview.htm"/>
+          </references>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-04-03T17:25:48.972">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="authorization-functions" name="Authorization Functions" desc="" library="">
+          <threats>
+            <threat ref="authorized-users-have-more-access-than-required-for-business-role" name="Authorized users have more access than required for business role" state="Expose" source="MANUAL" edited="false" owner="JamesRabe" library="" editable="true">
+              <desc/>
+              <riskRating confidentiality="100" integrity="100" availability="50" easeOfExploitation="25"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="enforce-fine-grained-access-control-using-profiles-and-permission-sets" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </component>
+    <component uuid="898cd3b1-63fd-4967-98b7-92c474f682c9" diagramComponentId="1ef843fa-d6d3-41ca-bc25-061dff299808" ref="a8f18ce5-053b-4b75-b66d-ed6519d0744c" name="Authentication Functions" desc="" library="CS-Default" parentComponentRef="c3f4b806-4e1d-4aa6-87c9-988d01a59ea5" componentDefinitionRef="empty-component">
+      <tags/>
+      <questions/>
+      <trustZones>
+        <trustZone ref="public-cloud"/>
+      </trustZones>
+      <assets/>
+      <settings/>
+      <weaknesses>
+        <weakness ref="stolen-credentials-are-used-to-login-from-an-unapproved-ip-address" name="Stolen credentials are used to login from an unapproved IP address" state="0" impact="100" issueId="" issueLink="">
+          <desc/>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-04-03T16:59:26.295">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </weakness>
+      </weaknesses>
+      <countermeasures>
+        <countermeasure ref="implement-a-strong-password-policy" name="Implement a strong password policy" issueId="" issueLink="" platform="" cost="0" risk="53" state="Recommended" owner="JamesRabe" library="" source="MANUAL" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;Strong password security is an important step in protecting your Salesforce accounts and Salesforce recommends these best practices:&amp;nbsp;&lt;/p&gt;
+&lt;ul&gt;
+ &lt;li&gt;Password expiration – Salesforce recommends no more than 90 days to force users to reset their passwords&lt;/li&gt;
+ &lt;li&gt;Password length – Salesforce suggestions minimum password length of 8-10 characters&lt;/li&gt;
+ &lt;li&gt;Password complexity – Admins should require users to include a mix of alpha, numeric, and special characters in their Salesforce password&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In addition, remind users to never reuse passwords on multiple accounts, or they risk compromise of more than one of their accounts. Last, users need to understand that they must never share passwords with anyone, either online or in person -- this includes their Salesforce password.&lt;/p&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="Managing User Passwords" url="https://help.salesforce.com/articleView?id=security_overview_passwords.htm&amp;type=5"/>
+          </references>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-04-03T17:23:39.614">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+        <countermeasure ref="set-login-ip-ranges" name="Set Login IP Ranges" issueId="" issueLink="" platform="" cost="0" risk="53" state="Recommended" owner="JamesRabe" library="" source="MANUAL" edited="false" stateChangeSource="" priority="">
+          <desc>&lt;p&gt;Login IP Ranges limit unauthorized access by requiring users to login to Salesforce from designated IP addresses — typically your corporate network or VPN. By using Login IP Ranges, admins can define a range of permitted IP addresses to control access to Salesforce. Those who try to login to Salesforce from outside the designated IP addresses will not be granted access.&amp;nbsp;&lt;/p&gt;
+&lt;ul&gt;
+ &lt;li&gt;If you are using Professional, Group, or Personal editions, you can configure Login IP Ranges under Security Controls &amp;gt; Session Settings.&amp;nbsp;&lt;/li&gt;
+ &lt;li&gt;If you are using Enterprise, Unlimited, Performance, or Developer editions, you can configure Login IP Ranges under Manage Users &amp;gt; Profiles.&lt;/li&gt;
+&lt;/ul&gt;</desc>
+          <implementations/>
+          <references>
+            <reference name="Learn How to Restrict Login IP Addresses" url="https://help.salesforce.com/apex/HTViewHelpDoc?id=login_ip_ranges.htm"/>
+          </references>
+          <standards/>
+          <customFields>
+            <customField ref="Compensating Controls" value=""/>
+          </customFields>
+          <test expiryDate="" expiryPeriod="0">
+            <steps/>
+            <notes/>
+            <source filename="" args="" type="Manual" result="Not Tested" enabled="true" timestamp="2023-04-03T17:01:42.066">
+              <output/>
+            </source>
+            <references/>
+            <customFields>
+              <customField ref="Documentation Links" value=""/>
+            </customFields>
+          </test>
+        </countermeasure>
+      </countermeasures>
+      <usecases>
+        <usecase ref="authentication-threats" name="Authentication Threats" desc="" library="">
+          <threats>
+            <threat ref="passwords-are-not-sufficiently-strong-and-can-be-easily-guessed-or-bruteforced" name="Passwords are not sufficiently strong and can be easily guessed or bruteforced" state="Expose" source="MANUAL" edited="false" owner="JamesRabe" library="" editable="true">
+              <desc/>
+              <riskRating confidentiality="100" integrity="100" availability="50" easeOfExploitation="50"/>
+              <references/>
+              <weaknesses/>
+              <countermeasures>
+                <countermeasure ref="implement-a-strong-password-policy" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+            <threat ref="unauthorized-users-with-stolen-credentials-can-access-internal-resources" name="Unauthorized users with stolen credentials can access internal resources" state="Expose" source="MANUAL" edited="false" owner="JamesRabe" library="" editable="true">
+              <desc/>
+              <riskRating confidentiality="100" integrity="100" availability="50" easeOfExploitation="50"/>
+              <references/>
+              <weaknesses>
+                <weakness ref="stolen-credentials-are-used-to-login-from-an-unapproved-ip-address">
+                  <countermeasures>
+                    <countermeasure ref="set-login-ip-ranges" mitigation="100"/>
+                  </countermeasures>
+                </weakness>
+              </weaknesses>
+              <countermeasures>
+                <countermeasure ref="set-login-ip-ranges" mitigation="100"/>
+              </countermeasures>
+              <customFields>
+                <customField ref="Attack Complexity" value=""/>
+                <customField ref="Attack Vector" value=""/>
+                <customField ref="Mitre" value=""/>
+                <customField ref="Privileges Required" value=""/>
+                <customField ref="Records" value=""/>
+                <customField ref="STRIDE" value=""/>
+                <customField ref="User Interaction" value=""/>
+              </customFields>
+            </threat>
+          </threats>
+        </usecase>
+      </usecases>
+    </component>
+  </components>
+</template>
