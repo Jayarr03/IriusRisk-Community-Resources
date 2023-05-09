@@ -1,9 +1,12 @@
 # IR_Resources
 Resources to use within IriusRisk
 
-
-# Templates - 
-Naming convention - "T_templatename"
-
 # Libraries - 
-Naming convention - "L_libraryname"
+
+OWASP - Top 10 - 2021
+
+  This is a library that maps OWASP Top 10 threats using a questionnaire attached to all components. 
+
+CCPA
+
+  This is a library that maps CCPA related privacy controls using a questionnaire attached to all components. 
