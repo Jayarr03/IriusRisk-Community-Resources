@@ -3,7 +3,7 @@ Resources to use within IriusRisk
 
 
 # Templates - 
-Naming convention - "T_<templatename>
+Naming convention - "T_templatename"
 
 # Libraries - 
-Naming convention - "L_<libraryname>
+Naming convention - "L_libraryname"
